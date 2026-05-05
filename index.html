@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Shruti Chandra, HCI researcher and product designer. MS Engineering Management, Tufts University.">
+  <title>Shruti Chandra</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <!-- ═══════════ HEADER ═══════════ -->
+  <header class="site-header" role="banner">
+    <div class="container">
+      <div class="header-inner">
+        <a href="#" class="site-logo" aria-label="Shruti Chandra home">Shruti Chandra</a>
+        <nav aria-label="Primary navigation">
+          <ul class="nav-list" id="nav-list">
+            <li><a href="#case-studies">Case Studies</a></li>
+            <li><a href="#research">Research</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+        <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav-list">
+          <span aria-hidden="true"></span><span aria-hidden="true"></span><span aria-hidden="true"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- ═══════════ HERO ═══════════ -->
+    <section class="hero" aria-labelledby="hero-heading">
+      <div class="container">
+        <div class="hero-inner">
+          <p class="eyebrow">MS Engineering Management · Tufts University · Boston, MA</p>
+          <h1 id="hero-heading">
+            Hi, I'm Shruti <br>
+            researcher, designer, and builder.
+          </h1>
+          <p class="hero-bio">
+            I work at the intersection of HCI, accessibility, and AI. My research asks who was assumed to be the user, and what it actually takes to include everyone else.
+          </p>
+          <div class="hero-chips" aria-label="Areas of focus">
+            <span class="chip">Co-Design</span>
+            <span class="chip">Accessibility</span>
+            <span class="chip">Lean Six Sigma</span>
+            <span class="chip">Mixed Methods</span>
+            <span class="chip">UX Research</span>
+          </div>
+          <a href="#case-studies" class="btn btn-primary">View Case Studies</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════ CASE STUDIES ═══════════ -->
+    <section id="case-studies" class="section" aria-labelledby="cs-section-heading">
+      <div class="container">
+        <p class="section-label">Case Studies</p>
+        <h2 id="cs-section-heading">Three projects, three methods.</h2>
+        <p class="section-intro">Co-design research, pre-registered experiments, and Lean Six Sigma process improvement, applied to real problems in accessibility, cognition, and design tooling.</p>
+
+        <!-- ─── CS 1: MoneyTalk ─── -->
+        <article class="case-study" id="cs-moneytalk" aria-labelledby="cs1-heading">
+          <div class="cs-header cs-header-green">
+            <div class="cs-header-inner">
+              <div class="cs-meta">
+                <span class="cs-number">01</span>
+                <div class="cs-tags">
+                  <span class="cstag">HCI Research</span>
+                  <span class="cstag">Co-Design</span>
+                  <span class="cstag">ADHD</span>
+                  <span class="cstag">Mixed Methods</span>
+                </div>
+              </div>
+              <h3 id="cs1-heading">MoneyTalk</h3>
+              <p class="cs-subtitle">A financial management tool co-designed with adults who identify as having ADHD, built from discourse analysis, survey data, and five co-design sessions.</p>
+            </div>
+          </div>
+
+          <div class="cs-body">
+
+            <div class="cs-overview">
+              <div class="cs-block">
+                <h4>The Problem</h4>
+                <p>Financial tools, budgeting apps, expense trackers, digital payment platforms, were designed with neurotypical cognitive patterns in mind. They assume users will engage with structured information consistently, sustain attention through multi-step workflows, and return to the tool regularly enough to build habits. For many adults with ADHD, these assumptions do not hold.</p>
+                <p>Existing tools are also reactive: they track and categorize spending <em>after</em> it occurs. There was no evidence-based tool designed specifically for the proactive, bespoke, fluctuating needs of adults with ADHD.</p>
+              </div>
+              <div class="cs-block">
+                <h4>The Approach</h4>
+                <div class="method-steps">
+                  <div class="method-step">
+                    <span class="step-num">1</span>
+                    <div>
+                      <strong>Online Discourse Analysis</strong>
+                      <p>Reddit API collection across 6 subreddits (r/ADHD, r/ADHDers, r/ADHD_partners, r/ynab, r/personalfinance, r/financialindependence). 3,099 raw posts → 1,668 after cleaning and ADHD relevance filtering. Hybrid deductive–inductive thematic coding (κ ≥ 0.70) + TextBlob sentiment analysis.</p>
+                    </div>
+                  </div>
+                  <div class="method-step">
+                    <span class="step-num">2</span>
+                    <div>
+                      <strong>Survey Study</strong>
+                      <p>11 participants (aged 18–34, 7 with ADHD diagnosis). 7-point Likert scale feature preferences, open-ended challenges, workarounds, and unmet needs. Survey also served as co-design recruitment.</p>
+                    </div>
+                  </div>
+                  <div class="method-step">
+                    <span class="step-num">3</span>
+                    <div>
+                      <strong>Co-Design Sessions</strong>
+                      <p>5 sessions (45–60 min each) with think-aloud protocol on a functional Netlify prototype, followed by sticky-note ideation. Divergence between participants treated as data, not noise, following Vines et al.'s "configuring participation" framework.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="cs-findings">
+              <h4>Key Findings</h4>
+              <div class="findings-grid">
+                <div class="finding-stat">
+                  <span class="fstat-num">1,668</span>
+                  <span class="fstat-label">Reddit posts analyzed across 6 communities</span>
+                </div>
+                <div class="finding-stat">
+                  <span class="fstat-num">71%</span>
+                  <span class="fstat-label">of posts tagged Price/Value, the top theme</span>
+                </div>
+                <div class="finding-stat">
+                  <span class="fstat-num">32%</span>
+                  <span class="fstat-label">of posts flagged Cognitive Load or Stress/Guilt</span>
+                </div>
+                <div class="finding-stat">
+                  <span class="fstat-num">$30→$100</span>
+                  <span class="fstat-label">range in friction thresholds across 5 co-design participants</span>
+                </div>
+              </div>
+
+              <div class="insight-row">
+                <div class="insight-card">
+                  <p class="insight-quote">"I want this app to be annoying. I need the friction."</p>
+                  <span class="insight-attr">P05, High friction, $30 threshold</span>
+                </div>
+                <div class="insight-vs" aria-hidden="true">vs.</div>
+                <div class="insight-card">
+                  <p class="insight-quote">"I don't want to be nagged for small stuff."</p>
+                  <span class="insight-attr">P04, Low friction, $100 threshold</span>
+                </div>
+              </div>
+              <p class="insight-note">Same population, opposite needs. This divergence is not noise, it is the fundamental design requirement: a financial tool for ADHD must be configurable, not fixed around a single assumed user profile.</p>
+
+              <div class="finding-block">
+                <h5>Three Design Contributions</h5>
+                <div class="contrib-grid">
+                  <div class="contrib">
+                    <span class="contrib-num">1</span>
+                    <strong>Bespoke &amp; Fluctuating Needs</strong>
+                    <p>Applying Mack et al.'s Goldilocks framework to ADHD finance: needs vary between individuals and within a single person throughout the day (medication timing, mood, time of night).</p>
+                  </div>
+                  <div class="contrib">
+                    <span class="contrib-num">2</span>
+                    <strong>Independence → Interdependence</strong>
+                    <p>The "Ally" model shifts from individual budgeting apps to collaborative accountability, user-controlled granularity, mutual rather than hierarchical sharing, with AI-based alternatives for privacy-preferring users.</p>
+                  </div>
+                  <div class="contrib">
+                    <span class="contrib-num">3</span>
+                    <strong>Reactive → Proactive</strong>
+                    <p>The Waiting Room feature (inspired by R4's cart-as-workaround strategy), cooling-off prompts, and time-of-day adaptive friction, helping users <em>before</em> a risky financial decision, not after.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="cs-outcomes">
+              <h4>Prototype Iterations</h4>
+              <div class="outcome-row">
+                <div class="outcome-item">
+                  <span class="outcome-label">V1, Discourse-Informed</span>
+                  <p>Post-Reddit analysis. Low-fidelity Figma prototype: simplified dashboard, manual transaction entry, cooling-off prompts, basic budget categories.</p>
+                  <a href="https://relaxed-ganache-e8896a.netlify.app/" class="cs-link" target="_blank" rel="noopener">View V1 ↗</a>
+                </div>
+                <div class="outcome-item">
+                  <span class="outcome-label">V2, Survey-Refined</span>
+                  <p>Functional Netlify prototype. Added "Can I afford this?" widget, friction level selector during onboarding, amber/yellow overspending color, onboarding shortened from 15 → 10 steps.</p>
+                  <a href="https://moneytalk-adhd.netlify.app/" class="cs-link" target="_blank" rel="noopener">View V2 ↗</a>
+                </div>
+                <div class="outcome-item">
+                  <span class="outcome-label">V3, Co-Design</span>
+                  <p>Waiting Room concept, modular dashboard with hide/reveal toggles, mood check-in with adaptive friction, Ally feature with granular permission controls.</p>
+                  <span class="cs-link-static">Figma Prototype</span>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </article>
+
+        <!-- ─── CS 2: Figma Color Filter ─── -->
+        <article class="case-study" id="cs-colorfilter" aria-labelledby="cs2-heading">
+          <div class="cs-header cs-header-teal">
+            <div class="cs-header-inner">
+              <div class="cs-meta">
+                <span class="cs-number">02</span>
+                <div class="cs-tags">
+                  <span class="cstag">Experiment</span>
+                  <span class="cstag">Pre-Registered</span>
+                  <span class="cstag">Color Vision</span>
+                  <span class="cstag">Figma Plugin</span>
+                </div>
+              </div>
+              <h3 id="cs2-heading">Accessible Figma: Color Filter for Deuteranopia</h3>
+              <p class="cs-subtitle">A pre-registered 2×2 factorial experiment testing whether a custom assistive color filter plugin improves task performance for designers who have deuteranopia, not just those designing for them.</p>
+            </div>
+          </div>
+
+          <div class="cs-body">
+
+            <div class="cs-overview">
+              <div class="cs-block">
+                <h4>The Problem</h4>
+                <p>Figma's built-in color blindness simulation filters were designed exclusively for normal-vision designers to <em>preview</em> how their work looks to color-blind users. No major design tool currently offers a feature to assist designers who <em>themselves</em> have color vision deficiency in performing color-dependent work.</p>
+                <p>A common concern among UX professionals is that implementing accessibility accommodations may degrade the experience for the general user base, an assumption that lacks empirical support but frequently delays or blocks accessibility investment.</p>
+              </div>
+              <div class="cs-block">
+                <h4>The Approach</h4>
+                <div class="design-table">
+                  <div class="design-cell design-cell-header">
+                    <span></span>
+                    <span>Filter OFF</span>
+                    <span>Filter ON</span>
+                  </div>
+                  <div class="design-cell">
+                    <span><strong>Deuteranopia</strong></span>
+                    <span>Group A<br><small>n=10</small></span>
+                    <span>Group B<br><small>n=10</small></span>
+                  </div>
+                  <div class="design-cell">
+                    <span><strong>Normal vision</strong></span>
+                    <span>Group C<br><small>n=10</small></span>
+                    <span>Group D<br><small>n=10</small></span>
+                  </div>
+                </div>
+                <p style="font-size:0.85rem;color:var(--text-muted);margin-top:0.75rem;">2×2 between-subjects ANOVA. Four color-dependent tasks in Figma: color matching, contrast identification, status color application, spot-the-difference. Pre-registered on OSF. Bayesian ANOVA (JASP) as supplementary analysis.</p>
+              </div>
+            </div>
+
+            <div class="cs-findings">
+              <h4>Results</h4>
+              <div class="findings-grid findings-grid-4">
+                <div class="finding-stat finding-stat-good">
+                  <span class="fstat-num">−43s</span>
+                  <span class="fstat-label">Reduction in task completion time for deuteranopic users with filter</span>
+                </div>
+                <div class="finding-stat finding-stat-good">
+                  <span class="fstat-num">−49%</span>
+                  <span class="fstat-label">Error rate reduction (5.1 → 2.6 errors) for deuteranopic users</span>
+                </div>
+                <div class="finding-stat finding-stat-good">
+                  <span class="fstat-num">−11</span>
+                  <span class="fstat-label">Fewer clicks required for deuteranopic users with filter on</span>
+                </div>
+                <div class="finding-stat finding-stat-neutral">
+                  <span class="fstat-num">n.s.</span>
+                  <span class="fstat-label">Effect on normal-vision users, no significant difference on any measure</span>
+                </div>
+              </div>
+
+              <div class="results-comparison">
+                <div class="results-bar-group">
+                  <h5>Task Completion Time (seconds)</h5>
+                  <div class="bar-row">
+                    <span class="bar-label">Deuteranopia, no filter</span>
+                    <div class="bar-track"><div class="bar-fill bar-bad" style="width:100%"><span>158s</span></div></div>
+                  </div>
+                  <div class="bar-row">
+                    <span class="bar-label">Deuteranopia, filter on</span>
+                    <div class="bar-track"><div class="bar-fill bar-good" style="width:73%"><span>115s</span></div></div>
+                  </div>
+                  <div class="bar-row">
+                    <span class="bar-label">Normal vision, no filter</span>
+                    <div class="bar-track"><div class="bar-fill bar-neutral" style="width:49%"><span>78s</span></div></div>
+                  </div>
+                  <div class="bar-row">
+                    <span class="bar-label">Normal vision, filter on</span>
+                    <div class="bar-track"><div class="bar-fill bar-neutral" style="width:58%"><span>92s</span></div></div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="finding-block">
+                <h5>Interpretation</h5>
+                <p>All three interaction effects were significant (p &lt; .05), supporting H1 (completion time), H2 (error rate), and H3 (click count). With the filter on, deuteranopic users were no longer significantly different from normal-vision users on any measure, the filter partially closes the performance gap. Bayesian analysis (BF₁₀ = 32.90 for the full model) provided very strong evidence for the interaction. The practical takeaway addresses the common concern directly: <strong>accessibility features designed for a specific group do not penalize general users.</strong></p>
+              </div>
+            </div>
+
+            <div class="cs-outcomes">
+              <h4>Open Science</h4>
+              <div class="outcome-row">
+                <div class="outcome-item">
+                  <span class="outcome-label">Pre-registered Protocol</span>
+                  <p>Stage 1 registered report submitted before data collection. Protocol deviations (JASP implementation) documented in Section 5.9 of the report.</p>
+                </div>
+                <div class="outcome-item">
+                  <span class="outcome-label">Open Data</span>
+                  <p>All data, analysis files (JASP), and the Stage 1 registered protocol available in the project repository.</p>
+                </div>
+                <div class="outcome-item">
+                  <span class="outcome-label">Custom Plugin</span>
+                  <p>Figma plugin built for the study remaps red-green color distinctions to blue-yellow equivalents, designed for active design work, not simulation.</p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </article>
+
+        <!-- ─── CS 3: LSS Figma Prototyping ─── -->
+        <article class="case-study" id="cs-lss" aria-labelledby="cs3-heading">
+          <div class="cs-header cs-header-warm">
+            <div class="cs-header-inner">
+              <div class="cs-meta">
+                <span class="cs-number">03</span>
+                <div class="cs-tags">
+                  <span class="cstag">Lean Six Sigma</span>
+                  <span class="cstag">DMAIC</span>
+                  <span class="cstag">Process Improvement</span>
+                  <span class="cstag">Figma</span>
+                </div>
+              </div>
+              <h3 id="cs3-heading">Improving Figma's Prototyping Workflow</h3>
+              <p class="cs-subtitle">A Lean Six Sigma DMAIC project applying statistical process control, DOE, and waste analysis to reduce UX prototype creation time from 47 minutes to a projected 22.</p>
+            </div>
+          </div>
+
+          <div class="cs-body">
+
+            <div class="cs-overview">
+              <div class="cs-block">
+                <h4>The Problem</h4>
+                <p>UX designers using Figma spent an average of 47.2 minutes creating interactive prototypes, nearly twice the target of 25 minutes. With a DPMO of 958,968 (less than 1 sigma), the prototyping process was effectively failing for the vast majority of design work.</p>
+                <p>Voice of the Customer interviews revealed the core frustration: designers were being forced to build workarounds for missing features rather than actually prototyping. "It's 2026 and we still can't do basic inputs," said one UX Lead at a FinTech company. Many designers skipped prototyping entirely and handed static mockups to developers instead.</p>
+              </div>
+              <div class="cs-block">
+                <h4>DMAIC Framework</h4>
+                <div class="method-steps">
+                  <div class="method-step">
+                    <span class="step-num step-num-amber">D</span>
+                    <div>
+                      <strong>Define</strong>
+                      <p>VOC interviews, Project Charter. Goal: reduce mean prototype time below 25 min.</p>
+                    </div>
+                  </div>
+                  <div class="method-step">
+                    <span class="step-num step-num-amber">M</span>
+                    <div>
+                      <strong>Measure</strong>
+                      <p>Statistical Process Control charts, 1-sample Z-test (p &lt; .0001 rejecting H₀ that mean ≤ 25 min), DPMO calculation.</p>
+                    </div>
+                  </div>
+                  <div class="method-step">
+                    <span class="step-num step-num-amber">A</span>
+                    <div>
+                      <strong>Analyze</strong>
+                      <p>8-step current process map, 2³ Design of Experiments (16 runs), waste identification across 5 categories, Ishikawa diagram across Tools, Process, People, Environment, Materials.</p>
+                    </div>
+                  </div>
+                  <div class="method-step">
+                    <span class="step-num step-num-amber">I</span>
+                    <div>
+                      <strong>Improve</strong>
+                      <p>Recommendations: pre-built interactive component kit, auto-layout enforcement, variables &amp; conditionals for states, prototype template library. 8 steps → 6 steps.</p>
+                    </div>
+                  </div>
+                  <div class="method-step">
+                    <span class="step-num step-num-amber">C</span>
+                    <div>
+                      <strong>Control</strong>
+                      <p>Standard operating procedures, training plan, KPI dashboard (avg time, rework rate, template reuse rate), continuous feedback loop.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="cs-findings">
+              <h4>Key Findings</h4>
+              <div class="findings-grid">
+                <div class="finding-stat finding-stat-bad">
+                  <span class="fstat-num">958,968</span>
+                  <span class="fstat-label">DPMO before improvement (&lt;1 sigma)</span>
+                </div>
+                <div class="finding-stat">
+                  <span class="fstat-num">60%</span>
+                  <span class="fstat-label">of prototype creation time was non-value-adding waste</span>
+                </div>
+                <div class="finding-stat finding-stat-good">
+                  <span class="fstat-num">−19.5 min</span>
+                  <span class="fstat-label">Average time saved by adopting a pre-built component library (DOE)</span>
+                </div>
+                <div class="finding-stat">
+                  <span class="fstat-num">25%</span>
+                  <span class="fstat-label">of total time lost to over-processing: manually building fake form inputs</span>
+                </div>
+              </div>
+
+              <div class="process-flow">
+                <h5>Current Process Map, Waste Identified</h5>
+                <div class="flow-steps">
+                  <div class="flow-step">Create static screens<span class="flow-time">8 min</span></div>
+                  <div class="flow-arrow" aria-hidden="true">→</div>
+                  <div class="flow-step">Duplicate frames for states<span class="flow-time">5 min</span></div>
+                  <div class="flow-arrow" aria-hidden="true">→</div>
+                  <div class="flow-step flow-step-waste">Manually build fake inputs<span class="flow-time">12 min ⚠</span></div>
+                  <div class="flow-arrow" aria-hidden="true">→</div>
+                  <div class="flow-step">Connect interactions<span class="flow-time">7 min</span></div>
+                  <div class="flow-arrow" aria-hidden="true">→</div>
+                  <div class="flow-step flow-step-waste">Test &amp; debug / Revise broken flows<span class="flow-time">9 min ⚠</span></div>
+                  <div class="flow-arrow" aria-hidden="true">→</div>
+                  <div class="flow-step">Share for testing<span class="flow-time">2 min</span></div>
+                </div>
+                <p class="flow-note">⚠ Red steps: primary waste areas. Together account for 21 of 47 minutes (45%).</p>
+              </div>
+
+              <div class="finding-block">
+                <h5>DOE, What Actually Reduces Prototype Time</h5>
+                <p>A 2³ factorial design (16 runs, 2 replicates) tested three factors: pre-built component library, auto-layout enforcement, and Figma variables/conditionals. All three main effects were statistically significant (p &lt; .001). No significant interactions between factors. The component library had the largest effect, reducing prototype time by an average of 19.5 minutes.</p>
+              </div>
+            </div>
+
+            <div class="cs-outcomes">
+              <h4>Projected Impact</h4>
+              <div class="outcome-row">
+                <div class="outcome-item outcome-item-highlight">
+                  <span class="outcome-label">Time</span>
+                  <p><strong>47.2 min → 22.4 min</strong><br>52% reduction in average prototype creation time. Below the 25-minute target.</p>
+                </div>
+                <div class="outcome-item outcome-item-highlight">
+                  <span class="outcome-label">Quality</span>
+                  <p><strong>958,968 → ~290,000 DPMO</strong><br>68% fewer defects. Process moves from &lt;1 sigma toward 2 sigma.</p>
+                </div>
+                <div class="outcome-item outcome-item-highlight">
+                  <span class="outcome-label">Process</span>
+                  <p><strong>8 steps → 6 steps</strong><br>Manual input-building and frame duplication eliminated. Interactions managed via variables in-place.</p>
+                </div>
+              </div>
+              <p class="outcome-note">With Sandra Igitego · Tufts Gordon Institute · EM 0211 Lean Six Sigma · Spring 2026</p>
+            </div>
+
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- ═══════════ RESEARCH ═══════════ -->
+    <section id="research" class="section section-sage" aria-labelledby="research-heading">
+      <div class="container">
+        <p class="section-label">Research &amp; Writing</p>
+        <h2 id="research-heading">Reading, critiquing, connecting.</h2>
+        <p class="section-intro">I write about the papers I read the way I think about them: with skepticism, specific suggestions, and connections to adjacent work.</p>
+
+        <div class="research-grid">
+
+          <a href="hci-portfolio.html" class="research-card" aria-labelledby="r1-heading">
+            <div class="research-card-top research-top-green">
+              <span class="research-icon" aria-hidden="true">♿</span>
+              <div class="research-card-tags">
+                <span class="rtag">11 Reading Sets</span>
+                <span class="rtag">25+ Papers</span>
+                <span class="rtag">Community Voices</span>
+              </div>
+            </div>
+            <div class="research-card-body">
+              <h3 id="r1-heading">HCI for Disability, Reading Portfolio</h3>
+              <p>Eleven reading sets from CS 0172 at Tufts, synthesized into five cross-cutting themes: the Foundation Problem, Invisible Labour, AI as Tool vs. Gatekeeper, Fluctuating &amp; Diverse Needs, and What Good Looks Like. Grounded in ASSETS '22–'24 and CHI '22 papers. Includes real community data on AI coding tool accessibility failures from GitHub, developer forums, and 2025 CHI research.</p>
+              <span class="research-cta">View Portfolio →</span>
+            </div>
+          </a>
+
+          <a href="https://accessibilityvisibility.netlify.app/" class="research-card" target="_blank" rel="noopener" aria-labelledby="r2-heading">
+            <div class="research-card-top research-top-sage">
+              <span class="research-icon" aria-hidden="true">📓</span>
+              <div class="research-card-tags">
+                <span class="rtag">Ongoing</span>
+                <span class="rtag">Astro + Netlify</span>
+              </div>
+            </div>
+            <div class="research-card-body">
+              <h3 id="r2-heading">Accessibility Visibility</h3>
+              <p>A running notebook of paper critiques on disability, HCI, and assistive technology. Each entry distills the argument, what the paper misses, and what should come next. Written in the style of a researcher who is also a practitioner, more skeptical than a summary, more constructive than a review.</p>
+              <span class="research-cta">accessibilityvisibility.netlify.app ↗</span>
+            </div>
+          </a>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════ EXPERIENCE ═══════════ -->
+    <section id="experience" class="section" aria-labelledby="exp-heading">
+      <div class="container">
+        <p class="section-label">Experience</p>
+        <h2 id="exp-heading">Where I've worked.</h2>
+
+        <div class="exp-grid">
+          <div class="timeline">
+
+            <div class="tl-item">
+              <div class="tl-dot" aria-hidden="true"></div>
+              <div class="tl-content">
+                <div class="tl-header">
+                  <h3>UX Designer</h3>
+                  <span class="tl-date">Jan 2026 – Present</span>
+                </div>
+                <p class="tl-org">Women in Tech, Tufts University · USA</p>
+                <ul class="tl-bullets">
+                  <li> WIT Tufts is a student-run organization that provides a safe and supportive space for women and non-binary individuals in tech.</li>
+                  <li>As a UX designer, I worked on the redesign of the WIT Tufts website to make it more accessible and user-friendly. I conducted user research, wireframed, and prototyped the new design.</li>
+                </ul>
+              </div>
+            </div>
+            
+            <div class="tl-item">
+              <div class="tl-dot" aria-hidden="true"></div>
+              <div class="tl-content">
+                <div class="tl-header">
+                  <h3>UX and Legal Researcher</h3>
+                  <span class="tl-date">Jan 2026 – Present</span>
+                </div>
+                <p class="tl-org">IDEA Lab @ Fletcher, Tufts University</p>
+                <ul class="tl-bullets">
+                  <li>Designing an app that is accessible to migrant in USA to navigate the legal, food, and shelter sources. </li>
+                  <li>This app has features that are accessible to migrants with different languages and abilities with a built in simpliefied UI and voice assistant.</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="tl-item">
+              <div class="tl-dot" aria-hidden="true"></div>
+              <div class="tl-content">
+                <div class="tl-header">
+                  <h3>UX + AI Digital Marketing &amp; Operations Intern</h3>
+                  <span class="tl-date">Jul 2025 – Dec</span>
+                </div>
+                <p class="tl-org">Tulip Interfaces · USA</p>
+                <ul class="tl-bullets">
+                  <li>Built a central insight platform linking Planhat, Salesforce, and 7,000+ Gong calls to surface customer data, case-study leads, and product feedback trends.</li>
+                  <li>Designed n8n automations to clean, merge, and route marketing and CRM data, cutting manual input by 80%.</li>
+                  <li>Automated video and content analysis workflows using ChatGPT and A/B testing, improving watch time and click-through rate.</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="tl-item">
+              <div class="tl-dot" aria-hidden="true"></div>
+              <div class="tl-content">
+                <div class="tl-header">
+                  <h3>Student Consultant</h3>
+                  <span class="tl-date">Jun 2025 – Present</span>
+                </div>
+                <p class="tl-org">IBM · USA</p>
+                <ul class="tl-bullets">
+                  <li>Partnered with UX + Engineering to evaluate voice-interaction and AR interface usability for connected vehicles.</li>
+                  <li>Combined interviews, contextual inquiry, and telemetry analysis to reduce cognitive load by 32%.</li>
+                  <li>Delivered research-based design recommendations on trust, safety, and compliance.</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="tl-item">
+              <div class="tl-dot" aria-hidden="true"></div>
+              <div class="tl-content">
+                <div class="tl-header">
+                  <h3>Business Analyst</h3>
+                  <span class="tl-date">Sep 2022 – May 2024</span>
+                </div>
+                <p class="tl-org">Deloitte India · Karnataka</p>
+                <ul class="tl-bullets">
+                  <li>Led Generative AI training using Reinforcement Learning for Amazon, improving model accuracy by 30%.</li>
+                  <li>Led a 20-member team to design RLHF-based QA processes, accelerating model deployment by 20%.</li>
+                  <li>Root cause analysis on 200+ ERP data discrepancies, improving data accuracy by 30%.</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="tl-item">
+              <div class="tl-dot" aria-hidden="true"></div>
+              <div class="tl-content">
+                <div class="tl-header">
+                  <h3>Business Analyst Intern</h3>
+                  <span class="tl-date">Jan 2022 – Jul 2022</span>
+                </div>
+                <p class="tl-org">Deloitte India · Karnataka</p>
+                <ul class="tl-bullets">
+                  <li>Designed automated Salesforce CRM workflows with RPA tools, reducing manual input by 66%, achieving 95% data accuracy.</li>
+                  <li>Built B2B lead prioritization dashboards, resulting in a 20% increase in sales pipeline.</li>
+                </ul>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="edu-sidebar">
+            <div class="edu-card">
+              <p class="edu-card-label">Education</p>
+              <div class="edu-entry">
+                <span class="edu-year">Expected May 2026</span>
+                <h4>MS, Engineering Management</h4>
+                <p class="edu-school">Tufts University · Boston, MA</p>
+                <p class="edu-gpa">GPA 3.78/4.0</p>
+                <p class="edu-courses">Current: HCI for Disability · Experimental Methods · Lean Six Sigma</p>
+              </div>
+              <div class="edu-divider"></div>
+              <div class="edu-entry">
+                <span class="edu-year">Aug 2018 – Jul 2022</span>
+                <h4>B.Tech, Electrical &amp; Electronics Engineering</h4>
+                <p class="edu-school">Manipal Institute of Technology · India</p>
+                <p class="edu-gpa">GPA 3.48/4.0 · Minor: Digital Marketing</p>
+              </div>
+            </div>
+
+            <div class="skills-card">
+              <p class="edu-card-label">Skills</p>
+              <div class="skill-group">
+                <span class="skill-group-label">Research &amp; Design</span>
+                <p>Figma · Dovetail · Maze · Affinity Mapping · Co-Design · Think-Aloud · Usability Testing</p>
+              </div>
+              <div class="skill-group">
+                <span class="skill-group-label">Data &amp; Methods</span>
+                <p>Python · SQL · Tableau · JASP · Thematic Coding · Bayesian ANOVA · Survey Design</p>
+              </div>
+              <div class="skill-group">
+                <span class="skill-group-label">AI &amp; Automation</span>
+                <p>RLHF · Prompt Design · LLM Evaluation · n8n · Zapier · Salesforce</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════ CONTACT ═══════════ -->
+    <section id="contact" class="section section-sage" aria-labelledby="contact-heading">
+      <div class="container">
+        <div class="contact-inner">
+          <p class="section-label">Contact</p>
+          <h2 id="contact-heading">Let's talk.</h2>
+          <p class="contact-sub">I'm interested in HCI research, product design, and roles where accessibility is treated as an engineering problem, not a compliance checkbox.</p>
+          <div class="contact-links">
+            <a href="mailto:shruti.chandra@tufts.edu" class="contact-link">
+              <span class="contact-icon" aria-hidden="true">✉</span>
+              <span class="contact-detail">
+                <span class="contact-label">Email</span>
+                <span class="contact-value">shruti.chandra@tufts.edu</span>
+              </span>
+            </a>
+            <a href="https://www.linkedin.com/in/shruti-chandra-118a661b2/" class="contact-link" target="_blank" rel="noopener">
+              <span class="contact-icon" aria-hidden="true">🔗</span>
+              <span class="contact-detail">
+                <span class="contact-label">LinkedIn</span>
+                <span class="contact-value">linkedin.com/in/shruti-chandra-118a661b2</span>
+              </span>
+            </a>
+            <a href="https://accessibilityvisibility.netlify.app/" class="contact-link" target="_blank" rel="noopener">
+              <span class="contact-icon" aria-hidden="true">📓</span>
+              <span class="contact-detail">
+                <span class="contact-label">Research Blog</span>
+                <span class="contact-value">accessibilityvisibility.netlify.app</span>
+              </span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-inner">
+        <p class="footer-name">Shruti Chandra</p>
+        <p class="footer-note">MS Engineering Management · Tufts University · Boston, MA · <a href="mailto:shruti.chandra@tufts.edu">shruti.chandra@tufts.edu</a></p>
+        <p class="footer-a11y">This portfolio meets WCAG 2.1 AA guidelines. Found a barrier? <a href="mailto:shruti.chandra@tufts.edu">Email me</a>.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

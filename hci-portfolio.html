@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="HCI for Disability, Reading Portfolio by Shruti Chandra. Five themes on digital accessibility, AI, and inclusive design.">
+  <title>HCI for Disability, Reading Portfolio · Shruti Chandra</title>
+  <link rel="stylesheet" href="hci-styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="site-header" role="banner">
+    <div class="container">
+      <div class="header-inner">
+        <a href="index.html" class="site-logo">← Shruti Chandra</a>
+        <nav aria-label="Portfolio navigation">
+          <ul class="nav-list" id="nav-list">
+            <li><a href="#themes">Themes</a></li>
+            <li><a href="#community">Community Voices</a></li>
+            <li><a href="#papers">Papers</a></li>
+          </ul>
+        </nav>
+        <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav-list">
+          <span aria-hidden="true"></span><span aria-hidden="true"></span><span aria-hidden="true"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- HERO -->
+    <section class="p-hero" aria-labelledby="p-hero-heading">
+      <div class="container">
+        <p class="eyebrow">CS 0172 HCI for Disability · Tufts University · Spring 2026</p>
+        <h1 id="p-hero-heading">
+          Digital Accessibility<br>
+          Is Not a Feature.<br>
+          <em>It's a Foundation.</em>
+        </h1>
+        <p class="p-hero-sub">A semester of research tracing how digital systems, and AI, create, sustain, or deepen barriers for people with disabilities. Synthesized from eleven reading sets spanning ASSETS '22–'24, CHI '22, and SIGACCESS research, grounded with community voices from developer forums and GitHub.</p>
+        <div class="p-stats" aria-label="Portfolio statistics">
+          <div class="p-stat"><span class="p-stat-n">11</span><span class="p-stat-l">Reading Sets</span></div>
+          <div class="p-stat"><span class="p-stat-n">25+</span><span class="p-stat-l">Papers Analyzed</span></div>
+          <div class="p-stat"><span class="p-stat-n">5</span><span class="p-stat-l">Cross-Cutting Themes</span></div>
+          <div class="p-stat"><span class="p-stat-n">10</span><span class="p-stat-l">Community Voices</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- THEMES -->
+    <section id="themes" class="section" aria-labelledby="themes-heading">
+      <div class="container">
+        <p class="section-label">Research Themes</p>
+        <h2 id="themes-heading">Five threads, one argument.</h2>
+        <p class="section-intro">Each theme emerges independently from multiple reading sets, then connects to the others. Together they describe a single infrastructure problem: the tools we use to build digital systems were not designed with disabled people as builders.</p>
+
+        <!-- Theme 1 -->
+        <article class="theme-card" aria-labelledby="t1-heading">
+          <div class="theme-header theme-h-green">
+            <span class="theme-num" aria-label="Theme one">01</span>
+            <h3 id="t1-heading">The Foundation Problem</h3>
+          </div>
+          <div class="theme-body">
+            <p class="theme-lead">The tools used to build accessible products are themselves inaccessible, creating a compounding barrier for disabled people who want to be designers, developers, and researchers, not just end users.</p>
+
+            <blockquote class="pullquote">
+              <p>"It's as if the architecture profession held conferences about wheelchair-accessible buildings while holding those conferences in buildings without ramps."</p>
+              <cite>On the inaccessibility of high-fidelity prototyping tools (Reading 9.2)</cite>
+            </blockquote>
+
+            <h4>Evidence Across Readings</h4>
+            <ul class="ev-list">
+              <li><strong>Prototyping tools</strong> (Reading 9.2): Figma and similar design tools are deeply inaccessible to designers with disabilities, excluding PwD from the exact workflow used to design products meant to serve them.</li>
+              <li><strong>Document editing</strong> (Reading 8.1): Google Docs, Chrome, and JAWS lack open API bridges needed to integrate accessibility workarounds cohesively. Having accessibility features is not enough if they create cognitive overload or require constant context-switching.</li>
+              <li><strong>Survey tools</strong> (Readings 5.1, 7, 8.1): Qualtrics, one of the most widely used research tools, had insufficient APIs to support ASL-based surveys, making it difficult to conduct research <em>about</em> DHH communities <em>with</em> DHH participants.</li>
+              <li><strong>Scientific software</strong> (Reading 10, Paper 2): A blind PhD student lost two years switching from MATLAB to Python after MATLAB refused to fix a known accessibility issue. This is a legal violation, yet recourse is slow and falls on the individual.</li>
+              <li><strong>Programming environments</strong> (Reading 9.3): The correct response is not to build separate accessible tools, but to make the shared foundation accessible, because parallel tools produce siloed environments, not collaboration.</li>
+            </ul>
+
+            <div class="analysis-block">
+              <h4>Analysis</h4>
+              <p>A recurring pattern: a widely-used platform claims to support accessibility, but when a disabled person attempts to <em>do work</em> with it, not consume it, but build with it, the API surface, keyboard support, or screen reader compatibility collapses. The gap between "has accessibility features" and "enables equal participation in technical work" is vast. This is precisely what WCAG compliance checklists fail to measure.</p>
+            </div>
+            <div class="theme-tags"><span class="ttag">Reading 9.2</span><span class="ttag">Reading 8.1</span><span class="ttag">Reading 9.3</span><span class="ttag">Reading 10</span><span class="ttag">Reading 5.1</span></div>
+          </div>
+        </article>
+
+        <!-- Theme 2 -->
+        <article class="theme-card" aria-labelledby="t2-heading">
+          <div class="theme-header theme-h-teal">
+            <span class="theme-num" aria-label="Theme two">02</span>
+            <h3 id="t2-heading">Invisible Labour</h3>
+          </div>
+          <div class="theme-body">
+            <p class="theme-lead">When systems fail, people compensate, and that compensation is constant, exhausting, and invisible to everyone except the person doing it. It is expected, but never credited.</p>
+
+            <blockquote class="pullquote">
+              <p>"The start line is different, but the finish line and the expectation are the same."</p>
+              <cite>On workarounds in professional settings (Reading 8.3)</cite>
+            </blockquote>
+
+            <h4>Evidence Across Readings</h4>
+            <ul class="ev-list">
+              <li><strong>In academia</strong> (Reading 10, Paper 2): Disabled PhD students described "workarounds as invisible labour", building custom scripts, switching entire tool stacks, self-advocating with institutions. Some wore this as a badge of pride; others found it was simply expected of them.</li>
+              <li><strong>In professional settings</strong> (Reading 8.3): Meeting facilitators who are blind or low vision must simultaneously manage speaker identification, chat monitoring, waiting rooms, and screen-sharing confirmation, tasks that sighted facilitators handle without friction.</li>
+              <li><strong>On social media</strong> (Reading 8.2): Disabled content creators found their videos age-restricted, demonetized, or thumbnails replaced by the algorithm. Gaining visibility required extra labour of <em>self-medicalization</em>, framing disability as a deficit to stay legible to the algorithm.</li>
+              <li><strong>In music</strong> (Reading 11, Tab 2): Blind musicians must lift their hands off the piano to read Braille scores, an extraneous complexity imposed by the interface, not inherent to the task. The intrinsic/extraneous complexity distinction from this paper extends far beyond music.</li>
+            </ul>
+
+            <div class="analysis-block">
+              <h4>Analysis</h4>
+              <p>The labour of workarounds becomes naturalized, invisible to institutions and colleagues. A blind researcher switching programming languages because a company refused to fix an accessibility issue is not a failure of the individual. It is a systemic failure the individual is forced to absorb. The question for AI tools is pointed: does AI coding assistance reduce this invisible labour, or does it create new forms, re-prompting for accessible outputs, verifying AI-generated code for screen reader compatibility, or building parallel tooling when AI interfaces are themselves inaccessible?</p>
+            </div>
+            <div class="theme-tags"><span class="ttag">Reading 10 (Paper 2)</span><span class="ttag">Reading 8.3</span><span class="ttag">Reading 8.2</span><span class="ttag">Reading 11 (Tab 2)</span></div>
+          </div>
+        </article>
+
+        <!-- Theme 3 -->
+        <article class="theme-card" aria-labelledby="t3-heading">
+          <div class="theme-header theme-h-warm">
+            <span class="theme-num" aria-label="Theme three">03</span>
+            <h3 id="t3-heading">AI as Tool vs. AI as Gatekeeper</h3>
+          </div>
+          <div class="theme-body">
+            <p class="theme-lead">AI offers genuine potential for accessibility, but also introduces new forms of misrepresentation, loss of agency, and deferred accountability. The difference lies in who controls it.</p>
+
+            <blockquote class="pullquote">
+              <p>"Using AI for such tasks seems lucrative and 'cheap labour,' but there could be serious caveats of false description... identities can change, transition, gender fluidity, so consent should not just be handled at the very beginning of the setup."</p>
+              <cite>On AI-generated image descriptions (Reading 5.2)</cite>
+            </blockquote>
+
+            <h4>Where AI Helps</h4>
+            <ul class="ev-list">
+              <li><strong>Creative work</strong> (Reading 9.1): Professional artists with disabilities use AI as a genuine assistive tool, an extension of skill, not a replacement. The accessibility of the AI pipeline itself remains an open research question.</li>
+              <li><strong>Performance</strong> (Reading 11, Tab 3): An ALS artist used technology to control an entire stage performance. Audiences described being moved by the artist's skill, not the engineering. Technology served the person's intent without becoming the story.</li>
+            </ul>
+
+            <h4>Where AI Fails or Harms</h4>
+            <ul class="ev-list">
+              <li><strong>Image descriptions</strong> (Reading 5.2): AI-generated alt text misidentifies race, gender, and disability, with no mechanism for the person depicted to correct the record. The pipeline encodes training data biases at scale.</li>
+              <li><strong>Removing user agency</strong> (Reading 4): Participants and presenters actively <em>distrust</em> AI modifying slides on their behalf, even when modifications would be in their interest. The concern is not accuracy; it is control.</li>
+              <li><strong>AI coding tools generate inaccessible code by default</strong>: Research shows developers may fail to prompt for accessible code, miss manual steps like replacing placeholder alt text, and cannot easily verify complex accessibility enhancements. AI perpetuates what it was trained on.</li>
+            </ul>
+
+            <div class="analysis-block">
+              <h4>Analysis</h4>
+              <p>The central tension is between AI as an <em>assistive tool</em> that amplifies a person's own capability versus AI as a <em>substitution</em> that acts on behalf of a person without their consent or control. The governance question matters: who reviews, who corrects, who is accountable when AI generates a false description or an inaccessible interface?</p>
+            </div>
+            <div class="theme-tags"><span class="ttag">Reading 5.2</span><span class="ttag">Reading 9.1</span><span class="ttag">Reading 9.3</span><span class="ttag">Reading 4</span><span class="ttag">Reading 11 (Tab 3)</span></div>
+          </div>
+        </article>
+
+        <!-- Theme 4 -->
+        <article class="theme-card" aria-labelledby="t4-heading">
+          <div class="theme-header theme-h-blue">
+            <span class="theme-num" aria-label="Theme four">04</span>
+            <h3 id="t4-heading">Fluctuating &amp; Diverse Needs</h3>
+          </div>
+          <div class="theme-body">
+            <p class="theme-lead">Disability is not binary, static, or homogeneous. Tools that treat it as such fail even within their intended audience, and AI systems trained on aggregate data risk serving the statistical centre while excluding the edges.</p>
+
+            <blockquote class="pullquote">
+              <p>"The paper not only highlights the diversity among the viewers that is often overlooked, but also the fluctuations that occur according to the time of day, the surrounding environment, etc."</p>
+              <cite>On bespoke slide accessibility (Reading 4)</cite>
+            </blockquote>
+
+            <h4>Evidence Across Readings</h4>
+            <ul class="ev-list">
+              <li><strong>Fluctuating access needs</strong> (Reading 4): A single audience member's access needs change across the duration of one presentation. The "Goldilocks" framing captures something fixed accessibility specifications cannot: not too much, not too little, and different for every person at every moment.</li>
+              <li><strong>Diversity within deafness</strong> (Reading 5.1): The DHH community is racially and ethnically diverse, with distinct sign language varieties within communities. Captioning as a universal solution ignores this entirely.</li>
+              <li><strong>Intellectual disability spectrum</strong> (Reading 4, ID paper): Within a single label there is enormous individual variation in sensory processing, communication modality, motor ability, and behavioral regulation. A product designed "for ID" that treats the category as homogeneous will fail most of its intended users.</li>
+              <li><strong>AAC and fluctuance</strong> (Reading 7): AAC devices designed as all-in-one solutions fail users whose needs change over time or context. A toolbox approach better reflects the reality of lived disability.</li>
+            </ul>
+
+            <div class="analysis-block">
+              <h4>Analysis</h4>
+              <p>Universal design is often interpreted as "one solution that works for everyone." These readings complicate that: a genuinely universal approach must be <em>configurable</em>, not uniform. An AI system that learns to generate "accessible output" from aggregated disability data learns to serve the modal case while failing the edges. Fluctuating needs may be nearly impossible to address without user-controlled, real-time interfaces.</p>
+            </div>
+            <div class="theme-tags"><span class="ttag">Reading 4</span><span class="ttag">Reading 5.1</span><span class="ttag">Reading 7</span><span class="ttag">Reading 9.2</span></div>
+          </div>
+        </article>
+
+        <!-- Theme 5 -->
+        <article class="theme-card" aria-labelledby="t5-heading">
+          <div class="theme-header theme-h-sage">
+            <span class="theme-num" aria-label="Theme five">05</span>
+            <h3 id="t5-heading">What Good Looks Like</h3>
+          </div>
+          <div class="theme-body">
+            <p class="theme-lead">Several papers demonstrate what ability-based, co-designed, socially-modelled solutions look like in practice, and what distinguishes them from deficit-driven approaches.</p>
+
+            <h4>Examples</h4>
+            <ul class="ev-list">
+              <li><strong>LivingMoments</strong> (Reading 7, Paper 3): A postcard-based communication system for people with dementia, designed from current abilities rather than from what is lost. The physical postcard gave people a reason to engage, not just a reminder of their health condition. Dementia stage was not a reliable predictor of technology engagement, which challenges clinical assumptions about who technology "is for."</li>
+              <li><strong>Asymmetric game design</strong> (Reading 11, Tab 1): Rather than simplifying a game for disabled players, the designers created asymmetric roles matched to each player's actual abilities. Collaboration, not accommodation, is the design goal.</li>
+              <li><strong>ALS performance art</strong> (Reading 11, Tab 3): Technology as amplifier of skill. Audiences reported being moved by the artist's control and intent, not the engineering. The technology served without becoming the story.</li>
+              <li><strong>Accessible Blockly</strong> (Reading 9.3): Rather than building a separate accessible programming environment, the team made the shared foundation accessible, enabling sighted and non-sighted programmers to collaborate on the same platform.</li>
+            </ul>
+
+            <div class="analysis-block">
+              <h4>What These Share</h4>
+              <p>Each example shares three properties: they <strong>start from ability</strong> rather than deficit; they <strong>preserve user control</strong> rather than automating on behalf of users; and they <strong>enable participation in shared spaces</strong> rather than creating parallel, separate ones. These are not aspirational, they are achievable design choices being demonstrated in peer-reviewed research right now.</p>
+            </div>
+            <div class="theme-tags"><span class="ttag">Reading 7 (Paper 3)</span><span class="ttag">Reading 11 (Tab 1)</span><span class="ttag">Reading 11 (Tab 3)</span><span class="ttag">Reading 9.3</span><span class="ttag">Reading 4</span></div>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- COMMUNITY VOICES -->
+    <section id="community" class="section section-sage" aria-labelledby="cv-heading">
+      <div class="container">
+        <p class="section-label">Community Voices</p>
+        <h2 id="cv-heading">What people actually encounter.</h2>
+        <p class="section-intro">Academic papers document what researchers observe. These voices document what people with disabilities actually experience, drawn from GitHub issues, developer forums, CHI research, and accessibility blogs. Focus: AI coding tools.</p>
+
+        <div class="cv-grid">
+
+          <article class="cv-card">
+            <span class="cv-badge">Screen Reader + AI CLI</span>
+            <h3>Claude Code has no screen reader mode</h3>
+            <blockquote><p>"Screen readers mispronounce characters, freeze during streaming output, or stop entirely. A <code>--screen-reader</code> mode flag, like Gemini CLI already has, would disable animations and format plain text."</p></blockquote>
+            <p class="cv-source">GitHub Issue #11002, claude-code · Community workarounds: <em>claude-a11y</em>, <em>claude-sonar</em></p>
+            <p class="cv-link"><strong>Connects to:</strong> Reading 8.1, cohesive accessibility requires API-level design, not retrofitting.</p>
+          </article>
+
+          <article class="cv-card">
+            <span class="cv-badge">GitHub Copilot · NVDA/JAWS</span>
+            <h3>Silent actions, unexpected sounds</h3>
+            <blockquote><p>"When selecting 'Apply in Editor' from Copilot Chat, there is no sound signal to confirm it worked. An unknown sound plays when Copilot shows inline suggestions, screen reader users have no idea what triggered it."</p></blockquote>
+            <p class="cv-source">GitHub Discussion #147602 · Workaround: redirect every Copilot response to a text file opened in Notepad, which works better with NVDA/JAWS.</p>
+            <p class="cv-link"><strong>Connects to:</strong> Reading 8.1, fragmented features without cohesive cognitive design. Reading 10 (Paper 2), invisible labour of parallel workaround systems.</p>
+          </article>
+
+          <article class="cv-card">
+            <span class="cv-badge">Cursor IDE · Legally Blind User</span>
+            <h3>"Chat constantly scrolls to the top"</h3>
+            <blockquote><p>"The generate feature (ctrl-k) is not screen reader accessible. Hover buttons that appear when selecting text interfere with text selection workflows. Cannot move the cursor back from the chat pane to the editor. Hover menus are a nightmare UX."</p></blockquote>
+            <p class="cv-source">Cursor Community Forum, multiple threads (2024–2025)</p>
+            <p class="cv-link"><strong>Connects to:</strong> Reading 9.2, design tools inaccessible to their own potential users.</p>
+          </article>
+
+          <article class="cv-card">
+            <span class="cv-badge">2025 CHI Study</span>
+            <h3>Developers want "AI timeouts"</h3>
+            <blockquote><p>"Developers who are visually impaired must listen to AI suggestions sequentially, inline ghost text overwhelmed users with more suggestions than they could process. Participants explicitly expressed a desire for <em>AI timeouts</em>: temporary pauses in AI interventions to allow uninterrupted focus."</p></blockquote>
+            <p class="cv-source">The Impact of Generative AI Coding Assistants on Developers Who Are Visually Impaired, CHI 2025</p>
+            <p class="cv-link"><strong>Connects to:</strong> Reading 4 (Goldilocks), too much intervention is as harmful as too little. Reading 8.1, cognitive accessibility requires more than feature presence.</p>
+          </article>
+
+          <article class="cv-card">
+            <span class="cv-badge">The Cycle Problem</span>
+            <h3>AI trained on inaccessible code generates inaccessible code</h3>
+            <blockquote><p>"AI agents aren't inherently bad at accessibility; they're just trained that way. AI can regurgitate the same bad code used in the past, which is then included in today's codebases and used to train future AI agents, continuing the cycle."</p></blockquote>
+            <p class="cv-source">Community-Access/accessibility-agents GitHub · AI Accessibility Barriers blog (Tim Dixon, 2026)</p>
+            <p class="cv-link"><strong>Connects to:</strong> Reading 5.2, AI reproducing and scaling existing biases at infrastructure level.</p>
+          </article>
+
+          <article class="cv-card">
+            <span class="cv-badge">TetraLogical · Alt Text</span>
+            <h3>AI-generated alt text is wrong 40% of the time</h3>
+            <blockquote><p>"AI described an image as 'a man standing' without recognising he was a firefighter in action, information crucial to the content's meaning. You should not trust AI-generated accessible code without verifying it."</p></blockquote>
+            <p class="cv-source">TetraLogical, "Can generative AI help write accessible code?" (2024)</p>
+            <p class="cv-link"><strong>Connects to:</strong> Reading 5.2 ("It's Complicated"), AI misrepresentation in image descriptions is a structural failure at scale.</p>
+          </article>
+
+          <article class="cv-card">
+            <span class="cv-badge">Microsoft Research · Positive</span>
+            <h3>AI enabling UI development for blind programmers</h3>
+            <blockquote><p>"Developers who use screen readers can now tackle previously challenging tasks like UI development through AI-assisted development. Historically, blind programmers were largely limited to back-end programming, AI is changing that."</p></blockquote>
+            <p class="cv-source">Microsoft Research Asia study (2024)</p>
+            <p class="cv-link"><strong>Connects to:</strong> Reading 9.1, AI as genuine assistive tool that expands professional access. Theme 5: what good looks like.</p>
+          </article>
+
+          <article class="cv-card">
+            <span class="cv-badge">2025 Study · Vibe Coding Era</span>
+            <h3>Natural language opens new doors, and reveals new gaps</h3>
+            <blockquote><p>"Screen reader programmers struggle with: inaccessible tool interfaces, lack of screen reader-specific documentation, and missing community resources. But natural language replacing traditional syntax is opening previously inaccessible areas, including UI, to blind programmers."</p></blockquote>
+            <p class="cv-source">Screen Reader Programmers in the Vibe Coding Era, arxiv 2025</p>
+            <p class="cv-link"><strong>Connects to:</strong> Readings 9.1 and 9.3, AI as equalizer vs. persistent infrastructure gaps.</p>
+          </article>
+
+          <article class="cv-card">
+            <span class="cv-badge">AFB Study</span>
+            <h3>Accessibility deferred until after launch</h3>
+            <blockquote><p>"Teams that couldn't keep up with manual accessibility review are now publishing more pages faster with the same constraints. Accessibility becomes something that happens after launch, after the campaign, or after a complaint. 72% of respondents with disabilities rated AI accessibility overlays negatively."</p></blockquote>
+            <p class="cv-source">American Foundation for the Blind, "Missing a Human Touch"</p>
+            <p class="cv-link"><strong>Connects to:</strong> Reading 5.3 (web accessibility as ongoing process). Reading 4, automated overlays cannot address fluctuating, bespoke access needs.</p>
+          </article>
+
+          <article class="cv-card">
+            <span class="cv-badge">CodeA11y · CHI 2025</span>
+            <h3>Community filling the gap Copilot leaves</h3>
+            <blockquote><p>"Developers may fail to explicitly prompt for accessible code, overlook critical manual steps like replacing placeholder alt text, and cannot verify if they fully implemented complex accessibility enhancements. CodeA11y was built to address what Copilot doesn't do by default."</p></blockquote>
+            <p class="cv-source">CodeA11y: Making AI Coding Assistants Useful for Accessible Web Development, CHI 2025</p>
+            <p class="cv-link"><strong>Connects to:</strong> Theme 1 (Foundation Problem), inaccessible defaults force community-built workarounds.</p>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- PAPERS INDEX -->
+    <section id="papers" class="section" aria-labelledby="papers-heading">
+      <div class="container">
+        <p class="section-label">Papers Index</p>
+        <h2 id="papers-heading">Primary research, by reading set.</h2>
+
+        <div class="papers-grid">
+
+          <div class="reading-group">
+            <h3 class="rg-label">Reading 4</h3>
+            <ul class="paper-list">
+              <li><span class="pt">"It's like Goldilocks:" Bespoke Slides for Fluctuating Audience Access Needs</span><div class="pt-tags"><span class="ttag sm">Fluctuating Needs</span><span class="ttag sm">AI &amp; Control</span></div></li>
+              <li><span class="pt">Including Adults with Severe Intellectual Disabilities in Co-Design through Active Support</span><div class="pt-tags"><span class="ttag sm">Co-Design</span><span class="ttag sm">ID Spectrum</span></div></li>
+            </ul>
+          </div>
+
+          <div class="reading-group">
+            <h3 class="rg-label">Reading 5</h3>
+            <ul class="paper-list">
+              <li><span class="pt">Towards Sign Language-Centric Design of ASL Survey Tools, Mahajan et al., CHI '22</span><div class="pt-tags"><span class="ttag sm">DHH</span><span class="ttag sm">Foundation Problem</span></div></li>
+              <li><span class="pt">Comparison of Methods for Evaluating Complexity of Simplified Texts among DHH Adults</span><div class="pt-tags"><span class="ttag sm">DHH</span><span class="ttag sm">Diverse Needs</span></div></li>
+              <li><span class="pt">"It's Complicated": Negotiating Accessibility and (Mis)Representation in Image Descriptions of Race, Gender, and Disability</span><div class="pt-tags"><span class="ttag sm">AI</span><span class="ttag sm">BLV</span></div></li>
+              <li><span class="pt">Towards Real-Time and Large-Scale Web Accessibility, Carvalho et al., ASSETS '23</span><div class="pt-tags"><span class="ttag sm">Web</span><span class="ttag sm">Foundation Problem</span></div></li>
+            </ul>
+          </div>
+
+          <div class="reading-group">
+            <h3 class="rg-label">Reading 7</h3>
+            <ul class="paper-list">
+              <li><span class="pt">Designing for Relational Maintenance: New Directions for AAC Research, Dai et al., CHI '22</span><div class="pt-tags"><span class="ttag sm">AAC</span><span class="ttag sm">Social Model</span></div></li>
+              <li><span class="pt">Looking Past Screen</span><div class="pt-tags"><span class="ttag sm">AAC</span><span class="ttag sm">Stigma</span></div></li>
+              <li><span class="pt">LivingMoments</span><div class="pt-tags"><span class="ttag sm">Dementia</span><span class="ttag sm">Good Design</span></div></li>
+            </ul>
+          </div>
+
+          <div class="reading-group">
+            <h3 class="rg-label">Reading 8</h3>
+            <ul class="paper-list">
+              <li><span class="pt">CollabAlly: Accessible Collaboration Awareness in Document Editing, Lee et al., CHI '22</span><div class="pt-tags"><span class="ttag sm">BLV</span><span class="ttag sm">Foundation Problem</span></div></li>
+              <li><span class="pt">Disability Content Creators and Algorithmic Discrimination on Social Media</span><div class="pt-tags"><span class="ttag sm">Algorithm</span><span class="ttag sm">Invisible Labour</span></div></li>
+              <li><span class="pt">"If I'm Supposed to be the Facilitator, I Should be the Host", Akter et al., ASSETS '23</span><div class="pt-tags"><span class="ttag sm">BLV</span><span class="ttag sm">Videoconferencing</span></div></li>
+            </ul>
+          </div>
+
+          <div class="reading-group">
+            <h3 class="rg-label">Reading 9</h3>
+            <ul class="paper-list">
+              <li><span class="pt">Painting with Cameras and Drawing with Text: AI Use in Accessible Creativity, Bennett et al., ASSETS '24</span><div class="pt-tags"><span class="ttag sm">AI</span><span class="ttag sm">Creative Work</span></div></li>
+              <li><span class="pt">Accessibility of High-Fidelity Prototyping Tools</span><div class="pt-tags"><span class="ttag sm">Foundation Problem</span><span class="ttag sm">Design Tools</span></div></li>
+              <li><span class="pt">Accessible Blockly: An Accessible Block-Based Programming Library for People with Visual Impairments</span><div class="pt-tags"><span class="ttag sm">Programming</span><span class="ttag sm">BLV</span></div></li>
+            </ul>
+          </div>
+
+          <div class="reading-group">
+            <h3 class="rg-label">Reading 10</h3>
+            <ul class="paper-list">
+              <li><span class="pt">Assistive Technology Training in Low- and Middle-Income Countries</span><div class="pt-tags"><span class="ttag sm">LMIC</span><span class="ttag sm">DHH</span></div></li>
+              <li><span class="pt">Invisible Labour: Accessibility Barriers for Disabled PhD Students in Computing</span><div class="pt-tags"><span class="ttag sm">Invisible Labour</span><span class="ttag sm">Academia</span></div></li>
+              <li><span class="pt">AI-Personalized Learning for BVI Children at Home</span><div class="pt-tags"><span class="ttag sm">BVI</span><span class="ttag sm">AI</span></div></li>
+            </ul>
+          </div>
+
+          <div class="reading-group">
+            <h3 class="rg-label">Reading 11</h3>
+            <ul class="paper-list">
+              <li><span class="pt">Asymmetric Game Design for Mixed-Ability Players</span><div class="pt-tags"><span class="ttag sm">BLV</span><span class="ttag sm">Good Design</span></div></li>
+              <li><span class="pt">Multimodal Music Reading for BVI Musicians: Braille, Audio, and Vibration</span><div class="pt-tags"><span class="ttag sm">BVI</span><span class="ttag sm">Multimodal</span></div></li>
+              <li><span class="pt">Technology-Enabled Performance: ALS Artist and Dance (case study)</span><div class="pt-tags"><span class="ttag sm">ALS</span><span class="ttag sm">AI as Tool</span></div></li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-inner">
+        <p class="footer-name">Shruti Chandra · <a href="index.html">Back to Portfolio</a></p>
+        <p class="footer-note">CS 0172 HCI for Disability · Tufts University · Spring 2026 · <a href="mailto:shruti.chandra@tufts.edu">shruti.chandra@tufts.edu</a></p>
+        <p class="footer-a11y">This portfolio meets WCAG 2.1 AA guidelines. Found a barrier? <a href="mailto:shruti.chandra@tufts.edu">Email me</a>.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
