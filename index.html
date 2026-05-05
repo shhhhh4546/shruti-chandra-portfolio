@@ -77,7 +77,7 @@
                 </div>
               </div>
               <h3 id="cs1-heading">MoneyTalk</h3>
-              <p class="cs-subtitle">A financial management tool co-designed with adults who identify as having ADHD, built from discourse analysis, survey data, and five co-design sessions.</p>
+              <p class="cs-subtitle">A financial management tool co-designed with adults who identify as having ADHD. Built across four phases: a literature review that identified the gap and seeded the research, public discourse analysis on Reddit, a survey, and five co-design sessions.</p>
             </div>
           </div>
 
@@ -86,39 +86,142 @@
             <div class="cs-overview">
               <div class="cs-block">
                 <h4>The Problem</h4>
-                <p>Financial tools, budgeting apps, expense trackers, digital payment platforms, were designed with neurotypical cognitive patterns in mind. They assume users will engage with structured information consistently, sustain attention through multi-step workflows, and return to the tool regularly enough to build habits. For many adults with ADHD, these assumptions do not hold.</p>
+                <p>Financial tools — budgeting apps, expense trackers, digital payment platforms — were designed with neurotypical cognitive patterns in mind. They assume users engage with structured information consistently, sustain attention through multi-step workflows, and return to the tool regularly enough to build habits. For many adults with ADHD, these assumptions do not hold.</p>
                 <p>Existing tools are also reactive: they track and categorize spending <em>after</em> it occurs. There was no evidence-based tool designed specifically for the proactive, bespoke, fluctuating needs of adults with ADHD.</p>
               </div>
               <div class="cs-block">
-                <h4>The Approach</h4>
-                <div class="method-steps">
-                  <div class="method-step">
-                    <span class="step-num">1</span>
-                    <div>
-                      <strong>Online Discourse Analysis</strong>
-                      <p>Reddit API collection across 6 subreddits (r/ADHD, r/ADHDers, r/ADHD_partners, r/ynab, r/personalfinance, r/financialindependence). 3,099 raw posts → 1,668 after cleaning and ADHD relevance filtering. Hybrid deductive–inductive thematic coding (κ ≥ 0.70) + TextBlob sentiment analysis.</p>
+                <h4>Overview</h4>
+                <div class="phase-overview-pills">
+                  <div class="pop"><span class="pop-n">1</span><span class="pop-label">Literature Review</span></div>
+                  <span class="pop-arrow" aria-hidden="true">→</span>
+                  <div class="pop"><span class="pop-n">2</span><span class="pop-label">Reddit Discourse</span></div>
+                  <span class="pop-arrow" aria-hidden="true">→</span>
+                  <div class="pop"><span class="pop-n">3</span><span class="pop-label">Survey</span></div>
+                  <span class="pop-arrow" aria-hidden="true">→</span>
+                  <div class="pop"><span class="pop-n">4</span><span class="pop-label">Co-Design</span></div>
+                </div>
+                <p style="font-size:0.85rem;color:var(--text-muted);margin-top:1rem;line-height:1.6;">Each phase was motivated by gaps in the previous one. Keywords for the Reddit scrape were derived directly from themes identified in the literature. Survey questions were structured around themes emerging from Reddit. Co-design participants were recruited through the survey.</p>
+              </div>
+            </div>
+
+            <div class="cs-phases">
+              <h4>Research Process</h4>
+
+              <!-- Phase 1 -->
+              <div class="phase-card">
+                <div class="phase-marker">
+                  <div class="phase-badge">Phase 1</div>
+                  <div class="phase-line" aria-hidden="true"></div>
+                </div>
+                <div class="phase-content">
+                  <h5>Literature Review</h5>
+                  <div class="phase-cols">
+                    <div class="phase-col">
+                      <span class="phase-col-label">Motivation</span>
+                      <p>Before collecting any primary data, a literature review was needed to understand what was already known, what had been attempted, and where the gap was. The goal was to avoid duplicating existing work and to ground the research questions in prior theory.</p>
+                    </div>
+                    <div class="phase-col">
+                      <span class="phase-col-label">Key Sources</span>
+                      <p>Barros Pena et al. (Toucan — reactive ally-based financial tool); Dai et al. (cognitive accessibility of digital payments); Spiel et al. (ADHD technology research critiqued for neurotypical structures); Mack et al. (Goldilocks — bespoke fluctuating access needs); Kaye et al. (#CHImoney — social financial management); Epstein et al. (personal informatics and behavior change).</p>
+                    </div>
+                    <div class="phase-col">
+                      <span class="phase-col-label">Gap Identified</span>
+                      <p>No existing tool was designed specifically for ADHD + financial management. All existing tools were reactive — they tracked spending after it happened. The social/collaborative dimension in Toucan was reactive-only. No tool accounted for the fluctuating, spectrum-wide nature of ADHD symptoms.</p>
                     </div>
                   </div>
-                  <div class="method-step">
-                    <span class="step-num">2</span>
-                    <div>
-                      <strong>Survey Study</strong>
-                      <p>11 participants (aged 18–34, 7 with ADHD diagnosis). 7-point Likert scale feature preferences, open-ended challenges, workarounds, and unmet needs. Survey also served as co-design recruitment.</p>
+                  <div class="phase-contributes">
+                    <span class="phase-contributes-label">Contributed to Phase 2</span>
+                    <p>Themes from the literature (impulse control, cognitive load, shame, social accountability, time blindness) became the keyword seeds for Reddit scraping. Mack et al.'s Goldilocks framework became the guiding theoretical lens for interpreting divergence across participants.</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Phase 2 -->
+              <div class="phase-card">
+                <div class="phase-marker">
+                  <div class="phase-badge">Phase 2</div>
+                  <div class="phase-line" aria-hidden="true"></div>
+                </div>
+                <div class="phase-content">
+                  <h5>Online Discourse Analysis — Reddit</h5>
+                  <div class="phase-cols">
+                    <div class="phase-col">
+                      <span class="phase-col-label">Motivation</span>
+                      <p>The literature lacked naturalistic, community-sourced data from adults with ADHD about financial management. Reddit was chosen because users share experiences unprompted, without researcher influence. This captures lived experience rather than responses shaped by study design.</p>
+                    </div>
+                    <div class="phase-col">
+                      <span class="phase-col-label">Method</span>
+                      <p>Reddit JSON API across 6 subreddits: r/ADHD, r/ADHDers, r/ADHD_partners, r/ynab, r/personalfinance, r/financialindependence. Keywords derived from the literature review (budget, spending, debt, bank, impulsive) filtered posts. 3,099 raw posts → 1,668 after cleaning. Hybrid deductive-inductive thematic coding, Cohen's κ ≥ 0.70, plus TextBlob sentiment analysis.</p>
+                    </div>
+                    <div class="phase-col">
+                      <span class="phase-col-label">Findings</span>
+                      <p>11 themes. Price/Value dominated (71%), followed by Visual Clutter (56%), Goal Setting (54%), Cognitive Load (32%), and Stress/Guilt (32%). ADHD subreddits had notably lower positivity (51-58%) versus finance communities (77-91%), reflecting struggle-sharing rather than solution-seeking. A cart-as-delay workaround emerged organically, not anticipated by the literature.</p>
                     </div>
                   </div>
-                  <div class="method-step">
-                    <span class="step-num">3</span>
-                    <div>
-                      <strong>Co-Design Sessions</strong>
-                      <p>5 sessions (45–60 min each) with think-aloud protocol on a functional Netlify prototype, followed by sticky-note ideation. Divergence between participants treated as data, not noise, following Vines et al.'s "configuring participation" framework.</p>
+                  <div class="phase-contributes">
+                    <span class="phase-contributes-label">Contributed to Phase 3</span>
+                    <p>The 11 Reddit themes directly structured the survey's 7-point Likert feature preference questions (e.g., reminders, automation, cognitive load reduction). The cart-as-workaround strategy surfaced by one Reddit user later became the Waiting Room feature in the prototype. Tool abandonment patterns from Reddit informed tool usage questions in the survey.</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Phase 3 -->
+              <div class="phase-card">
+                <div class="phase-marker">
+                  <div class="phase-badge">Phase 3</div>
+                  <div class="phase-line" aria-hidden="true"></div>
+                </div>
+                <div class="phase-content">
+                  <h5>Survey Study — n=11</h5>
+                  <div class="phase-cols">
+                    <div class="phase-col">
+                      <span class="phase-col-label">Motivation</span>
+                      <p>Reddit data was naturalistic but anonymous — no demographics, no structured preferences, no ability to follow up. A survey was needed to capture demographic context (age, income, gender, diagnosis status), structured feature priorities, and to recruit participants for co-design.</p>
+                    </div>
+                    <div class="phase-col">
+                      <span class="phase-col-label">Method</span>
+                      <p>11 participants (aged 18-34, 7 with ADHD diagnosis, 1 with Autism reporting similar challenges). 7-point Likert scale on 11 features aligned to Reddit themes. Open-ended questions on challenges, workarounds, and unmet needs. Distributed via university listservs.</p>
+                    </div>
+                    <div class="phase-col">
+                      <span class="phase-col-label">Findings</span>
+                      <p>Affordable pricing rated highest (mean 6.5/7); automation and clean design (5.9); gamification lowest (3.5). A strong anti-manual-entry consensus emerged. R4 articulated a pre-spending gap no existing tool addressed. R8 raised a financial agency gap — tools assume users control their income. R11 wanted analysis before planning, not budgeting before seeing spending patterns.</p>
+                    </div>
+                  </div>
+                  <div class="phase-contributes">
+                    <span class="phase-contributes-label">Contributed to Phase 4</span>
+                    <p>R4's cart-as-workaround strategy directly inspired the Waiting Room prototype feature. The pre-spending gap shaped the "Can I afford this?" widget. Individual variation in feature ratings (gamification ranged 1-7) confirmed that co-design sessions should treat divergence as signal, not noise. Survey participants opted in to co-design sessions.</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Phase 4 -->
+              <div class="phase-card phase-card-last">
+                <div class="phase-marker">
+                  <div class="phase-badge">Phase 4</div>
+                </div>
+                <div class="phase-content">
+                  <h5>Co-Design Sessions — n=5</h5>
+                  <div class="phase-cols">
+                    <div class="phase-col">
+                      <span class="phase-col-label">Motivation</span>
+                      <p>Survey responses revealed what participants wanted but not how they interacted with a real tool. Co-design sessions were needed to test a functional prototype, surface individual variation, and gather generative design ideas. Following Vines et al.'s "configuring participation" framework: divergence between participants was documented as meaningful data, not averaged out.</p>
+                    </div>
+                    <div class="phase-col">
+                      <span class="phase-col-label">Method</span>
+                      <p>5 sessions (45-60 min). Guided think-aloud walkthrough of 5 tasks on a functional Netlify prototype, followed by sticky-note ideation on 5 structured prompts. Two researchers following the same session guide. Individual reflection before group discussion to ensure no single voice dominated.</p>
+                    </div>
+                    <div class="phase-col">
+                      <span class="phase-col-label">Findings</span>
+                      <p>Friction thresholds ranged from $30 to $100 across 5 participants — confirming the Goldilocks principle at the individual level. The impulse intervention ("like having a friend tap you on the shoulder") was the most consistently praised feature. The Ally feature split cleanly along a privacy/accountability axis. Gamification ranged from enthusiastic adoption to active dismissal. Mood check-in embraced by those who link emotional state to spending, dismissed by those preferring factual interfaces.</p>
                     </div>
                   </div>
                 </div>
               </div>
+
             </div>
 
             <div class="cs-findings">
-              <h4>Key Findings</h4>
+              <h4>Key Findings Across All Phases</h4>
               <div class="findings-grid">
                 <div class="finding-stat">
                   <span class="fstat-num">1,668</span>
@@ -126,15 +229,15 @@
                 </div>
                 <div class="finding-stat">
                   <span class="fstat-num">71%</span>
-                  <span class="fstat-label">of posts tagged Price/Value, the top theme</span>
+                  <span class="fstat-label">of posts tagged Price/Value, the top Reddit theme</span>
                 </div>
                 <div class="finding-stat">
-                  <span class="fstat-num">32%</span>
-                  <span class="fstat-label">of posts flagged Cognitive Load or Stress/Guilt</span>
+                  <span class="fstat-num">6.5 / 7</span>
+                  <span class="fstat-label">mean rating for affordable pricing — highest survey feature</span>
                 </div>
                 <div class="finding-stat">
-                  <span class="fstat-num">$30→$100</span>
-                  <span class="fstat-label">range in friction thresholds across 5 co-design participants</span>
+                  <span class="fstat-num">$30 → $100</span>
+                  <span class="fstat-label">friction threshold range across 5 co-design participants</span>
                 </div>
               </div>
 
@@ -156,18 +259,18 @@
                 <div class="contrib-grid">
                   <div class="contrib">
                     <span class="contrib-num">1</span>
-                    <strong>Bespoke &amp; Fluctuating Needs</strong>
+                    <strong>Bespoke and Fluctuating Needs</strong>
                     <p>Applying Mack et al.'s Goldilocks framework to ADHD finance: needs vary between individuals and within a single person throughout the day (medication timing, mood, time of night).</p>
                   </div>
                   <div class="contrib">
                     <span class="contrib-num">2</span>
-                    <strong>Independence → Interdependence</strong>
-                    <p>The "Ally" model shifts from individual budgeting apps to collaborative accountability, user-controlled granularity, mutual rather than hierarchical sharing, with AI-based alternatives for privacy-preferring users.</p>
+                    <strong>Independence to Interdependence</strong>
+                    <p>The Ally model shifts from individual budgeting apps to collaborative accountability — user-controlled granularity, mutual rather than hierarchical sharing, with AI-based alternatives for privacy-preferring users.</p>
                   </div>
                   <div class="contrib">
                     <span class="contrib-num">3</span>
-                    <strong>Reactive → Proactive</strong>
-                    <p>The Waiting Room feature (inspired by R4's cart-as-workaround strategy), cooling-off prompts, and time-of-day adaptive friction, helping users <em>before</em> a risky financial decision, not after.</p>
+                    <strong>Reactive to Proactive</strong>
+                    <p>The Waiting Room feature (inspired by R4's cart-as-workaround), cooling-off prompts, and time-of-day adaptive friction, helping users <em>before</em> a risky financial decision, not after.</p>
                   </div>
                 </div>
               </div>
@@ -178,12 +281,12 @@
               <div class="outcome-row">
                 <div class="outcome-item">
                   <span class="outcome-label">V1, Discourse-Informed</span>
-                  <p>Post-Reddit analysis. Low-fidelity Figma prototype: simplified dashboard, manual transaction entry, cooling-off prompts, basic budget categories.</p>
+                  <p>Built after Reddit analysis. Low-fidelity Figma prototype: simplified dashboard, manual transaction entry, cooling-off prompts, basic budget categories.</p>
                   <a href="https://relaxed-ganache-e8896a.netlify.app/" class="cs-link" target="_blank" rel="noopener">View V1 ↗</a>
                 </div>
                 <div class="outcome-item">
                   <span class="outcome-label">V2, Survey-Refined</span>
-                  <p>Functional Netlify prototype. Added "Can I afford this?" widget, friction level selector during onboarding, amber/yellow overspending color, onboarding shortened from 15 → 10 steps.</p>
+                  <p>Functional Netlify prototype. Added "Can I afford this?" widget, friction level selector during onboarding, amber/yellow overspending color, onboarding shortened from 15 to 10 steps.</p>
                   <a href="https://moneytalk-adhd.netlify.app/" class="cs-link" target="_blank" rel="noopener">View V2 ↗</a>
                 </div>
                 <div class="outcome-item">

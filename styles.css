@@ -599,3 +599,106 @@ a:hover { color: var(--link-hover); }
   .site-header, .skip-link, .nav-toggle { display: none; }
   .case-study { break-inside: avoid; }
 }
+
+/* ============================================================
+   PHASE FLOW (MoneyTalk case study)
+   ============================================================ */
+
+/* Overview pills */
+.phase-overview-pills {
+  display: flex; align-items: center; flex-wrap: wrap; gap: 0.5rem;
+}
+.pop {
+  display: flex; align-items: center; gap: 0.5rem;
+  background: var(--card); border: 1px solid var(--card-border);
+  border-radius: var(--r-sm); padding: 0.45rem 0.85rem;
+  box-shadow: var(--shadow-sm);
+}
+.pop-n {
+  width: 20px; height: 20px; border-radius: 50%;
+  background: var(--accent); color: #fff;
+  font-size: 0.68rem; font-weight: 700;
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+}
+.pop-label { font-size: 0.82rem; font-weight: 600; color: var(--text); }
+.pop-arrow { font-size: 0.9rem; color: var(--accent-light); font-weight: 700; }
+
+/* Phase flow container */
+.cs-phases { display: flex; flex-direction: column; gap: 0; }
+.cs-phases h4 {
+  font-size: 0.78rem; font-weight: 700; letter-spacing: 0.1em;
+  text-transform: uppercase; color: var(--accent);
+  margin-bottom: 1.25rem; padding-bottom: 0.6rem;
+  border-bottom: 1px solid var(--border);
+}
+
+/* Phase card */
+.phase-card {
+  display: grid; grid-template-columns: 80px 1fr;
+  gap: 0;
+}
+
+.phase-marker {
+  display: flex; flex-direction: column; align-items: center;
+  padding-top: 0.25rem;
+}
+.phase-badge {
+  font-size: 0.68rem; font-weight: 800; letter-spacing: 0.08em;
+  text-transform: uppercase; color: #fff;
+  background: var(--accent); padding: 0.25rem 0.6rem;
+  border-radius: var(--r-sm); white-space: nowrap; flex-shrink: 0;
+}
+.phase-line {
+  width: 2px; flex-grow: 1; background: var(--accent-light);
+  margin-top: 0.5rem; min-height: 2rem;
+}
+
+.phase-content {
+  padding: 0 0 2rem 1.5rem;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 0;
+}
+.phase-card-last .phase-content { border-bottom: none; padding-bottom: 0.5rem; }
+.phase-card-last .phase-line { display: none; }
+
+.phase-content h5 {
+  font-size: 1rem; font-weight: 700; color: var(--text);
+  margin-bottom: 1rem; letter-spacing: -0.01em;
+}
+
+/* Three columns inside each phase */
+.phase-cols {
+  display: grid; grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem; margin-bottom: 1rem;
+}
+.phase-col {}
+.phase-col-label {
+  display: block; font-size: 0.68rem; font-weight: 700;
+  text-transform: uppercase; letter-spacing: 0.1em;
+  color: var(--accent); margin-bottom: 0.4rem;
+}
+.phase-col p { font-size: 0.85rem; color: var(--text-muted); line-height: 1.65; margin: 0; }
+
+/* Contributes footer */
+.phase-contributes {
+  background: var(--accent-xlight); border: 1px solid var(--accent-light);
+  border-radius: var(--r-sm); padding: 0.75rem 1rem;
+  display: flex; gap: 0.75rem; align-items: flex-start;
+}
+.phase-contributes-label {
+  font-size: 0.68rem; font-weight: 800; letter-spacing: 0.08em;
+  text-transform: uppercase; color: var(--accent);
+  white-space: nowrap; flex-shrink: 0; padding-top: 0.1rem;
+}
+.phase-contributes p {
+  font-size: 0.83rem; color: var(--text-muted); line-height: 1.6; margin: 0;
+}
+
+@media (max-width: 900px) {
+  .phase-cols { grid-template-columns: 1fr; }
+  .phase-card { grid-template-columns: 60px 1fr; }
+  .phase-contributes { flex-direction: column; gap: 0.4rem; }
+  .phase-overview-pills { gap: 0.4rem; }
+  .pop-arrow { display: none; }
+}
