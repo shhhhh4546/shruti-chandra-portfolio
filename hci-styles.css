@@ -14,6 +14,7 @@
   --border:      #000000;
   --border-w:    3px;
   --pink:        #F6A6B2;
+  --green-light: #D4EDD8;
   --shadow:      5px 5px 0 #000000;
   --shadow-sm:   3px 3px 0 #000000;
   --font: 'Times New Roman', Times, serif;
@@ -46,7 +47,7 @@ a:hover { background: var(--pink); }
 .site-logo {
   font-weight: 900; font-size: 1rem; letter-spacing: 0.08em; text-transform: uppercase;
   color: var(--text); text-decoration: none;
-  border: var(--border-w) solid var(--text); padding: 0.25rem 0.75rem; background: var(--pink);
+  border: var(--border-w) solid var(--text); padding: 0.25rem 0.75rem; background: var(--green-light);
 }
 .site-logo:hover { background: var(--text); color: var(--pink); }
 .nav-list { display: flex; list-style: none; gap: 0; }
@@ -76,7 +77,7 @@ a:hover { background: var(--pink); }
 .hero-inner { max-width: 800px; }
 .eyebrow { display: inline-block; font-size: 0.72rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; border: var(--border-w) solid var(--text); padding: 0.2rem 0.6rem; margin-bottom: 1.5rem; background: var(--card); }
 .hero h1 { font-size: clamp(2.8rem, 7vw, 5.5rem); font-weight: 900; line-height: 0.98; text-transform: uppercase; letter-spacing: -0.02em; margin-bottom: 1.5rem; border-left: 8px solid var(--text); padding-left: 1.25rem; }
-.hero h1 em { font-style: italic; background: var(--pink); padding: 0 0.2em; }
+.hero h1 em { font-style: italic; background: var(--green-light); padding: 0 0.2em; }
 .hero-bio { font-size: 1.05rem; color: var(--text-muted); max-width: 560px; line-height: 1.7; margin-bottom: 2rem; border-left: var(--border-w) solid var(--text); padding-left: 1rem; }
 .hero-bio strong { color: var(--text); font-weight: 700; }
 .hero-chips { display: flex; flex-wrap: wrap; gap: 0; margin-bottom: 2rem; }
@@ -89,9 +90,9 @@ a:hover { background: var(--pink); }
 /* CASE STUDIES */
 .case-study { background: var(--card); border: var(--border-w) solid var(--text); box-shadow: var(--shadow); margin-bottom: 3rem; }
 .cs-header { padding: 2rem 2.5rem; border-bottom: var(--border-w) solid var(--text); }
-.cs-header-green { background: var(--pink); }
+.cs-header-green { background: var(--green-light); }
 .cs-header-pink  { background: var(--pink); }
-.cs-header-warm  { background: var(--pink); }
+.cs-header-warm  { background: var(--green-light); }
 .cs-header-inner { max-width: 820px; }
 .cs-meta { display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem; }
 .cs-number { font-size: 0.65rem; font-weight: 900; letter-spacing: 0.2em; text-transform: uppercase; border: var(--border-w) solid var(--text); padding: 0.15rem 0.5rem; flex-shrink: 0; background: var(--card); }
@@ -159,7 +160,7 @@ a:hover { background: var(--pink); }
 .findings-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; margin-bottom: 1.75rem; border: var(--border-w) solid var(--text); }
 .finding-stat { padding: 1.25rem 1rem; border-right: var(--border-w) solid var(--text); text-align: center; }
 .finding-stat:last-child { border-right: none; }
-.finding-stat-good { background: var(--pink); }
+.finding-stat-good { background: var(--green-light); }
 .finding-stat-bad  { background: #F6A6B2; }
 .finding-stat-neutral { background: var(--card); }
 .fstat-num { display: block; font-size: 1.8rem; font-weight: 900; line-height: 1.1; margin-bottom: 0.3rem; }
@@ -194,7 +195,7 @@ a:hover { background: var(--pink); }
 .bar-track { background: var(--bg); border: var(--border-w) solid var(--text); height: 32px; }
 .bar-fill { height: 100%; display: flex; align-items: center; padding-left: 0.75rem; font-size: 0.78rem; font-weight: 900; min-width: 60px; }
 .bar-bad     { background: #F6A6B2; color: var(--text); }
-.bar-good    { background: var(--pink); color: var(--text); }
+.bar-good    { background: var(--green-light); color: var(--text); }
 .bar-neutral { background: var(--pink); color: var(--text); }
 
 /* Process flow */
@@ -227,7 +228,7 @@ a:hover { background: var(--pink); }
 .research-card { background: var(--card); border: var(--border-w) solid var(--text); box-shadow: var(--shadow); text-decoration: none; color: inherit; display: flex; flex-direction: column; transition: transform 0.1s, box-shadow 0.1s; }
 .research-card:hover { transform: translate(5px, 5px); box-shadow: none; }
 .research-card-top { padding: 1.5rem 2rem; border-bottom: var(--border-w) solid var(--text); display: flex; align-items: center; gap: 1.25rem; }
-.research-top-green { background: var(--pink); }
+.research-top-green { background: var(--green-light); }
 .research-top-sage  { background: var(--pink); }
 .research-icon { font-size: 2rem; }
 .research-card-tags { display: flex; flex-wrap: wrap; gap: 0.4rem; }
@@ -344,7 +345,7 @@ a:hover { background: var(--pink); }
    ============================================================ */
 .p-hero { padding: 5rem 0 4rem; background: var(--bg); border-bottom: var(--border-w) solid var(--text); }
 .p-hero h1 { font-size: clamp(2.4rem, 5vw, 4.5rem); font-weight: 900; line-height: 0.98; text-transform: uppercase; letter-spacing: -0.02em; margin-bottom: 1.5rem; border-left: 8px solid var(--text); padding-left: 1.25rem; }
-.p-hero h1 em { font-style: italic; background: var(--pink); padding: 0 0.2em; }
+.p-hero h1 em { font-style: italic; background: var(--green-light); padding: 0 0.2em; }
 .p-hero-sub { font-size: 1rem; color: var(--text-muted); max-width: 680px; line-height: 1.7; margin-bottom: 2.5rem; border-left: var(--border-w) solid var(--text); padding-left: 1rem; }
 .p-stats { display: flex; gap: 0; flex-wrap: wrap; border: var(--border-w) solid var(--text); display: inline-flex; }
 .p-stat { text-align: center; padding: 1rem 2rem; border-right: var(--border-w) solid var(--text); }
@@ -355,7 +356,7 @@ a:hover { background: var(--pink); }
 /* Theme cards */
 .theme-card { background: var(--card); border: var(--border-w) solid var(--text); box-shadow: var(--shadow); margin-bottom: 2rem; }
 .theme-header { display: flex; align-items: center; gap: 1.25rem; padding: 1.25rem 2rem; border-bottom: var(--border-w) solid var(--text); }
-.theme-h-green { background: var(--pink); }
+.theme-h-green { background: var(--green-light); }
 .theme-h-pink  { background: var(--pink); }
 .theme-h-warm  { background: var(--pink); }
 .theme-h-blue  { background: #B8D8BE; }
