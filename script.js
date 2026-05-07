@@ -111,12 +111,11 @@ const Desktop = (() => {
   function centerWindow(win) {
     if (!win) return;
     if (window.innerWidth <= 768) return; /* mobile uses flow layout */
-    const desktopH   = window.innerHeight - 36;
-    const folderGap  = 150; /* approximate width of right-side folder column */
-    const usableW    = window.innerWidth - folderGap;
+    const desktopH = window.innerHeight - 36;
     const w = win.offsetWidth  || 860;
     const h = win.offsetHeight || 480;
-    win.style.left = Math.max(8, (usableW - w) / 2) + 'px';
+    /* True centre — CSS already constrains width so right edge clears the folder column */
+    win.style.left = Math.max(8, (window.innerWidth - w) / 2) + 'px';
     win.style.top  = Math.max(8, (desktopH - h) / 2) + 'px';
   }
 

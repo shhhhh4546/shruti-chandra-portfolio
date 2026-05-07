@@ -265,7 +265,7 @@ a:hover { color: var(--accent-hover); }
 
 /* ── WELCOME WINDOW ── */
 #window-welcome {
-  width:  min(860px, calc(100vw - 150px));
+  width:  min(860px, calc(100vw - 280px));
   max-height: min(620px, calc(100vh - 36px - 20px));
 }
 
