@@ -107,15 +107,17 @@ const Desktop = (() => {
     if (btn) btn.focus();
   }
 
-  /* Center a window on the visible desktop area */
+  /* Center welcome window in the usable area, leaving room for the folder column */
   function centerWindow(win) {
     if (!win) return;
-    const desktopW = window.innerWidth;
-    const desktopH = window.innerHeight - 36; /* minus menu bar */
-    const w = win.offsetWidth  || 440;
-    const h = win.offsetHeight || 380;
-    win.style.left = Math.max(0, (desktopW - w) / 2) + 'px';
-    win.style.top  = Math.max(0, (desktopH - h) / 2) + 'px';
+    if (window.innerWidth <= 768) return; /* mobile uses flow layout */
+    const desktopH   = window.innerHeight - 36;
+    const folderGap  = 150; /* approximate width of right-side folder column */
+    const usableW    = window.innerWidth - folderGap;
+    const w = win.offsetWidth  || 680;
+    const h = win.offsetHeight || 480;
+    win.style.left = Math.max(8, (usableW - w) / 2) + 'px';
+    win.style.top  = Math.max(8, (desktopH - h) / 2) + 'px';
   }
 
   function bringToFront(win) {
