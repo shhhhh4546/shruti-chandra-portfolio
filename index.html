@@ -1,794 +1,749 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Shruti Chandra, HCI researcher and product designer. MS Engineering Management, Tufts University.">
+  <meta name="description" content="Shruti Chandra - HCI researcher, designer, and builder. MS Engineering Management, Tufts University.">
   <title>Shruti Chandra</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <a class="skip-link" href="#main">Skip to main content</a>
+  <a class="skip-link" href="#desktop">Skip to main content</a>
 
-  <!-- ═══════════ HEADER ═══════════ -->
-  <header class="site-header" role="banner">
-    <div class="container">
-      <div class="header-inner">
-        <a href="#" class="site-logo" aria-label="Shruti Chandra home">Shruti Chandra</a>
-        <nav aria-label="Primary navigation">
-          <ul class="nav-list" id="nav-list">
-            <li><a href="#case-studies">Case Studies</a></li>
-            <li><a href="#research">Research</a></li>
-            <li><a href="#experience">Experience</a></li>
-            <li><a href="#contact">Contact</a></li>
-          </ul>
-        </nav>
-        <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav-list">
-          <span aria-hidden="true"></span><span aria-hidden="true"></span><span aria-hidden="true"></span>
-        </button>
-      </div>
+  <!-- ═══ MENU BAR ═══ -->
+  <div class="menu-bar" role="banner">
+    <span class="menu-brand">Shruti Chandra</span>
+    <span class="menu-sub" aria-hidden="true">HCI · Accessibility · Design</span>
+    <div class="menu-controls">
+      <button class="ctrl-btn" id="mode-toggle" aria-label="Switch to light mode" aria-pressed="false" title="Toggle dark/light mode">
+        <span aria-hidden="true" id="mode-icon">☀</span>
+      </button>
+      <button class="ctrl-btn" id="dyslexic-toggle" aria-label="Enable dyslexic-friendly font" aria-pressed="false" title="Toggle dyslexic-friendly font (Atkinson Hyperlegible)">
+        <span aria-hidden="true">Aa</span>
+      </button>
+      <time class="menu-clock" id="menu-clock" aria-live="polite"></time>
     </div>
-  </header>
+  </div>
 
-  <main id="main">
+  <!-- ═══ DESKTOP ═══ -->
+  <main class="desktop" id="desktop" aria-label="Portfolio desktop">
 
-    <!-- ═══════════ HERO ═══════════ -->
-    <section class="hero" aria-labelledby="hero-heading">
-      <div class="container">
-        <div class="hero-inner">
-          <p class="eyebrow">MS Engineering Management · Tufts University · Boston, MA</p>
-          <h1 id="hero-heading">
-            Hi, I'm Shruti <br>
-            researcher, designer, and builder.
-          </h1>
-          <p class="hero-bio">
-            I work at the intersection of HCI, accessibility, and AI. My research asks who was assumed to be the user, and what it actually takes to include everyone else.
+    <!-- ─── WELCOME WINDOW ─── -->
+    <div class="window" id="window-welcome"
+         role="dialog" aria-labelledby="win-welcome-title" aria-modal="false"
+         hidden>
+      <div class="window-titlebar" data-drag="window-welcome">
+        <div class="window-title-group">
+          <span class="window-dot" aria-hidden="true"></span>
+          <span class="window-title" id="win-welcome-title">shruti_chandra.txt</span>
+        </div>
+      </div>
+      <div class="window-content welcome-content">
+
+        <!-- LEFT: intro -->
+        <div class="welcome-left">
+          <p class="win-eyebrow">MS Engineering Management · Tufts University · Boston, MA</p>
+          <h1 class="win-name">Shruti<br>Chandra.</h1>
+          <p class="win-role">Researcher · Designer · Builder</p>
+          <p class="win-bio">
+            I work at the intersection of HCI, accessibility, and AI - asking who was assumed to be the user, and what it actually takes to include everyone else.
           </p>
-          <div class="hero-chips" aria-label="Areas of focus">
+          <div class="chip-row" aria-label="Areas of focus">
             <span class="chip">Co-Design</span>
             <span class="chip">Accessibility</span>
             <span class="chip">Lean Six Sigma</span>
             <span class="chip">Mixed Methods</span>
             <span class="chip">UX Research</span>
           </div>
-          <a href="#case-studies" class="btn btn-primary">View Case Studies</a>
+          <div class="win-actions">
+            <a href="mailto:shruti.chandra@tufts.edu" class="btn-primary">Say Hello ↗</a>
+            <button class="btn-secondary" onclick="Desktop.open('contact')">Contact Info</button>
+          </div>
         </div>
+
+        <!-- RIGHT: skills -->
+        <div class="welcome-right" aria-label="Skills">
+          <p class="win-section-label">Skills</p>
+          <div class="skill-panel">
+            <div class="skill-panel-group">
+              <span class="skill-panel-label">Research &amp; Design</span>
+              <div class="skill-panel-chips">
+                <span class="skill-chip">Figma</span>
+                <span class="skill-chip">Dovetail</span>
+                <span class="skill-chip">Maze</span>
+                <span class="skill-chip">Affinity Mapping</span>
+                <span class="skill-chip">Co-Design</span>
+                <span class="skill-chip">Think-Aloud</span>
+                <span class="skill-chip">Usability Testing</span>
+              </div>
+            </div>
+            <div class="skill-panel-group">
+              <span class="skill-panel-label">Data &amp; Methods</span>
+              <div class="skill-panel-chips">
+                <span class="skill-chip">Python</span>
+                <span class="skill-chip">SQL</span>
+                <span class="skill-chip">Tableau</span>
+                <span class="skill-chip">JASP</span>
+                <span class="skill-chip">Thematic Coding</span>
+                <span class="skill-chip">Bayesian ANOVA</span>
+                <span class="skill-chip">Survey Design</span>
+              </div>
+            </div>
+            <div class="skill-panel-group">
+              <span class="skill-panel-label">AI &amp; Automation</span>
+              <div class="skill-panel-chips">
+                <span class="skill-chip">RLHF</span>
+                <span class="skill-chip">Prompt Design</span>
+                <span class="skill-chip">LLM Evaluation</span>
+                <span class="skill-chip">n8n</span>
+                <span class="skill-chip">Zapier</span>
+                <span class="skill-chip">Salesforce</span>
+              </div>
+            </div>
+            <div class="skill-panel-group">
+              <span class="skill-panel-label">Process</span>
+              <div class="skill-panel-chips">
+                <span class="skill-chip">Lean Six Sigma</span>
+                <span class="skill-chip">DMAIC</span>
+                <span class="skill-chip">RLHF QA</span>
+                <span class="skill-chip">Agile</span>
+                <span class="skill-chip">Root Cause Analysis</span>
+              </div>
+            </div>
+          </div>
+          <div class="welcome-status">
+            <span class="status-dot" aria-hidden="true"></span>
+            <span>Available for opportunities · Boston, MA</span>
+          </div>
+        </div>
+
       </div>
-    </section>
+    </div>
 
-    <!-- ═══════════ CASE STUDIES ═══════════ -->
-    <section id="case-studies" class="section" aria-labelledby="cs-section-heading">
-      <div class="container">
-        <p class="section-label">Case Studies</p>
-        <h2 id="cs-section-heading">Three projects, three methods.</h2>
-        <p class="section-intro">Co-design research, pre-registered experiments, and Lean Six Sigma process improvement, applied to real problems in accessibility, cognition, and design tooling.</p>
+    <!-- ─── DESKTOP ICONS ─── -->
+    <nav class="desktop-icons" aria-label="Desktop folders">
 
-        <!-- ─── CS 1: MoneyTalk ─── -->
-        <article class="case-study" id="cs-moneytalk" aria-labelledby="cs1-heading">
-          <div class="cs-header cs-header-green">
-            <div class="cs-header-inner">
-              <div class="cs-meta">
-                <span class="cs-number">01</span>
-                <div class="cs-tags">
-                  <span class="cstag">HCI Research</span>
-                  <span class="cstag">Co-Design</span>
-                  <span class="cstag">ADHD</span>
-                  <span class="cstag">Mixed Methods</span>
-                </div>
-              </div>
-              <h3 id="cs1-heading">MoneyTalk</h3>
-              <p class="cs-subtitle">A financial management tool co-designed with adults who identify as having ADHD. Built across four phases: a literature review that identified the gap and seeded the research, public discourse analysis on Reddit, a survey, and five co-design sessions.</p>
-            </div>
+      <div class="folder-item">
+        <button class="folder-btn" data-folder="case-studies"
+                aria-label="Open Case Studies" aria-haspopup="dialog">
+          <div class="folder-body" aria-hidden="true">
+            <div class="folder-tab"></div>
+            <div class="folder-face"><span class="folder-emoji">📊</span></div>
           </div>
+          <span class="folder-label">Case Studies</span>
+        </button>
+      </div>
 
+      <div class="folder-item">
+        <button class="folder-btn" data-folder="work-experience"
+                aria-label="Open Work Experience" aria-haspopup="dialog">
+          <div class="folder-body" aria-hidden="true">
+            <div class="folder-tab"></div>
+            <div class="folder-face"><span class="folder-emoji">💼</span></div>
+          </div>
+          <span class="folder-label">Work Experience</span>
+        </button>
+      </div>
+
+      <div class="folder-item">
+        <button class="folder-btn" data-folder="research"
+                aria-label="Open Research" aria-haspopup="dialog">
+          <div class="folder-body" aria-hidden="true">
+            <div class="folder-tab"></div>
+            <div class="folder-face"><span class="folder-emoji">🔬</span></div>
+          </div>
+          <span class="folder-label">Research</span>
+        </button>
+      </div>
+
+      <div class="folder-item">
+        <button class="folder-btn" data-folder="contact"
+                aria-label="Open Contact" aria-haspopup="dialog">
+          <div class="folder-body" aria-hidden="true">
+            <div class="folder-tab"></div>
+            <div class="folder-face"><span class="folder-emoji">✉</span></div>
+          </div>
+          <span class="folder-label">Contact</span>
+        </button>
+      </div>
+
+      <div class="folder-item">
+        <button class="folder-btn" data-folder="hobbies"
+                aria-label="Open Hobbies" aria-haspopup="dialog">
+          <div class="folder-body" aria-hidden="true">
+            <div class="folder-tab"></div>
+            <div class="folder-face"><span class="folder-emoji">📚</span></div>
+          </div>
+          <span class="folder-label">Hobbies</span>
+        </button>
+      </div>
+
+    </nav>
+
+    <!-- ─── CONTEXT MENU ─── -->
+    <div class="context-menu" id="context-menu" hidden role="menu" aria-label="Folder options">
+      <div class="context-label" id="context-folder-name" role="presentation">Open With</div>
+      <button class="context-item" role="menuitem" data-action="open-general">
+        <span class="ctx-icon" aria-hidden="true">Aa</span>Open in General Font
+      </button>
+      <button class="context-item" role="menuitem" data-action="open-dyslexic">
+        <span class="ctx-icon" aria-hidden="true">Aa</span>Open in Dyslexic Font
+      </button>
+      <div class="context-sep" role="separator"></div>
+      <button class="context-item" role="menuitem" data-action="open-same">
+        <span class="ctx-icon" aria-hidden="true">⊡</span>Open in Same Tab
+      </button>
+      <button class="context-item" role="menuitem" data-action="open-new-tab">
+        <span class="ctx-icon" aria-hidden="true">↗</span>Open in New Tab
+      </button>
+      <div class="context-sep" role="separator"></div>
+      <button class="context-item" role="menuitem" data-action="open-dark">
+        <span class="ctx-icon" aria-hidden="true">🌙</span>Open in Dark Mode
+      </button>
+    </div>
+
+    <!-- ══════════════════════════════════════════════════════════
+         FOLDER WINDOWS
+    ══════════════════════════════════════════════════════════ -->
+
+    <!-- ─── CASE STUDIES WINDOW ─── -->
+    <div class="window window-folder" id="window-case-studies" hidden
+         role="dialog" aria-labelledby="win-cs-title" aria-modal="false"
+         style="left:8vw; top:4rem;">
+      <div class="window-titlebar" data-drag="window-case-studies">
+        <div class="window-title-group">
+          <span class="window-dot" aria-hidden="true"></span>
+          <span class="window-title" id="win-cs-title">📊 Case Studies</span>
+        </div>
+        <button class="wctrl wctrl-close" data-close="window-case-studies" aria-label="Close">×</button>
+      </div>
+      <div class="window-content folder-content">
+
+        <div class="folder-header-bar">
+          <p class="folder-intro">Three projects. Three methods. Co-design, pre-registered experiment, and Lean Six Sigma, applied to real problems in accessibility, cognition, and design tooling.</p>
+        </div>
+
+        <!-- CS 01: MoneyTalk -->
+        <article class="cs-card" aria-labelledby="cs1-title">
+          <div class="cs-card-header cs-green">
+            <div class="cs-meta">
+              <span class="cs-num">01</span>
+              <div class="cs-tags">
+                <span class="tag">HCI Research</span>
+                <span class="tag">Co-Design</span>
+                <span class="tag">ADHD</span>
+                <span class="tag">Mixed Methods</span>
+              </div>
+            </div>
+            <h2 class="cs-title" id="cs1-title">MoneyTalk</h2>
+            <p class="cs-sub">A financial management tool co-designed with adults who identify as having ADHD, built across four phases: literature review, Reddit discourse analysis, survey, and five co-design sessions.</p>
+          </div>
           <div class="cs-body">
-
-            <div class="cs-overview">
-              <div class="cs-block">
-                <h4>The Problem</h4>
-                <p>Financial tools — budgeting apps, expense trackers, digital payment platforms — were designed with neurotypical cognitive patterns in mind. They assume users engage with structured information consistently, sustain attention through multi-step workflows, and return to the tool regularly enough to build habits. For many adults with ADHD, these assumptions do not hold.</p>
-                <p>Existing tools are also reactive: they track and categorize spending <em>after</em> it occurs. There was no evidence-based tool designed specifically for the proactive, bespoke, fluctuating needs of adults with ADHD.</p>
+            <div class="cs-two-col">
+              <div>
+                <h3 class="block-label">The Problem</h3>
+                <p>Financial tools were designed with neurotypical cognitive patterns in mind - assuming users engage consistently, sustain attention through multi-step workflows, and build habits. For many adults with ADHD, these assumptions do not hold. All existing tools were also reactive: they track spending <em>after</em> it occurs.</p>
               </div>
-              <div class="cs-block">
-                <h4>Overview</h4>
-                <div class="phase-overview-pills">
-                  <div class="pop"><span class="pop-n">1</span><span class="pop-label">Literature Review</span></div>
-                  <span class="pop-arrow" aria-hidden="true">→</span>
-                  <div class="pop"><span class="pop-n">2</span><span class="pop-label">Reddit Discourse</span></div>
-                  <span class="pop-arrow" aria-hidden="true">→</span>
-                  <div class="pop"><span class="pop-n">3</span><span class="pop-label">Survey</span></div>
-                  <span class="pop-arrow" aria-hidden="true">→</span>
-                  <div class="pop"><span class="pop-n">4</span><span class="pop-label">Co-Design</span></div>
-                </div>
-                <p style="font-size:0.85rem;color:var(--text-muted);margin-top:1rem;line-height:1.6;">Each phase was motivated by gaps in the previous one. Keywords for the Reddit scrape were derived directly from themes identified in the literature. Survey questions were structured around themes emerging from Reddit. Co-design participants were recruited through the survey.</p>
-              </div>
-            </div>
-
-            <div class="cs-phases">
-              <h4>Research Process</h4>
-
-              <!-- Phase 1 -->
-              <div class="phase-card">
-                <div class="phase-marker">
-                  <div class="phase-badge">Phase 1</div>
-                  <div class="phase-line" aria-hidden="true"></div>
-                </div>
-                <div class="phase-content">
-                  <h5>Literature Review</h5>
-                  <div class="phase-cols">
-                    <div class="phase-col">
-                      <span class="phase-col-label">Motivation</span>
-                      <p>Before collecting any primary data, a literature review was needed to understand what was already known, what had been attempted, and where the gap was. The goal was to avoid duplicating existing work and to ground the research questions in prior theory.</p>
-                    </div>
-                    <div class="phase-col">
-                      <span class="phase-col-label">Key Sources</span>
-                      <p>Barros Pena et al. (Toucan — reactive ally-based financial tool); Dai et al. (cognitive accessibility of digital payments); Spiel et al. (ADHD technology research critiqued for neurotypical structures); Mack et al. (Goldilocks — bespoke fluctuating access needs); Kaye et al. (#CHImoney — social financial management); Epstein et al. (personal informatics and behavior change).</p>
-                    </div>
-                    <div class="phase-col">
-                      <span class="phase-col-label">Gap Identified</span>
-                      <p>No existing tool was designed specifically for ADHD + financial management. All existing tools were reactive — they tracked spending after it happened. The social/collaborative dimension in Toucan was reactive-only. No tool accounted for the fluctuating, spectrum-wide nature of ADHD symptoms.</p>
-                    </div>
-                  </div>
-                  <div class="phase-contributes">
-                    <span class="phase-contributes-label">Contributed to Phase 2</span>
-                    <p>Themes from the literature (impulse control, cognitive load, shame, social accountability, time blindness) became the keyword seeds for Reddit scraping. Mack et al.'s Goldilocks framework became the guiding theoretical lens for interpreting divergence across participants.</p>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Phase 2 -->
-              <div class="phase-card">
-                <div class="phase-marker">
-                  <div class="phase-badge">Phase 2</div>
-                  <div class="phase-line" aria-hidden="true"></div>
-                </div>
-                <div class="phase-content">
-                  <h5>Online Discourse Analysis — Reddit</h5>
-                  <div class="phase-cols">
-                    <div class="phase-col">
-                      <span class="phase-col-label">Motivation</span>
-                      <p>The literature lacked naturalistic, community-sourced data from adults with ADHD about financial management. Reddit was chosen because users share experiences unprompted, without researcher influence. This captures lived experience rather than responses shaped by study design.</p>
-                    </div>
-                    <div class="phase-col">
-                      <span class="phase-col-label">Method</span>
-                      <p>Reddit JSON API across 6 subreddits: r/ADHD, r/ADHDers, r/ADHD_partners, r/ynab, r/personalfinance, r/financialindependence. Keywords derived from the literature review (budget, spending, debt, bank, impulsive) filtered posts. 3,099 raw posts → 1,668 after cleaning. Hybrid deductive-inductive thematic coding, Cohen's κ ≥ 0.70, plus TextBlob sentiment analysis.</p>
-                    </div>
-                    <div class="phase-col">
-                      <span class="phase-col-label">Findings</span>
-                      <p>11 themes. Price/Value dominated (71%), followed by Visual Clutter (56%), Goal Setting (54%), Cognitive Load (32%), and Stress/Guilt (32%). ADHD subreddits had notably lower positivity (51-58%) versus finance communities (77-91%), reflecting struggle-sharing rather than solution-seeking. A cart-as-delay workaround emerged organically, not anticipated by the literature.</p>
-                    </div>
-                  </div>
-                  <div class="phase-contributes">
-                    <span class="phase-contributes-label">Contributed to Phase 3</span>
-                    <p>The 11 Reddit themes directly structured the survey's 7-point Likert feature preference questions (e.g., reminders, automation, cognitive load reduction). The cart-as-workaround strategy surfaced by one Reddit user later became the Waiting Room feature in the prototype. Tool abandonment patterns from Reddit informed tool usage questions in the survey.</p>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Phase 3 -->
-              <div class="phase-card">
-                <div class="phase-marker">
-                  <div class="phase-badge">Phase 3</div>
-                  <div class="phase-line" aria-hidden="true"></div>
-                </div>
-                <div class="phase-content">
-                  <h5>Survey Study — n=11</h5>
-                  <div class="phase-cols">
-                    <div class="phase-col">
-                      <span class="phase-col-label">Motivation</span>
-                      <p>Reddit data was naturalistic but anonymous — no demographics, no structured preferences, no ability to follow up. A survey was needed to capture demographic context (age, income, gender, diagnosis status), structured feature priorities, and to recruit participants for co-design.</p>
-                    </div>
-                    <div class="phase-col">
-                      <span class="phase-col-label">Method</span>
-                      <p>11 participants (aged 18-34, 7 with ADHD diagnosis, 1 with Autism reporting similar challenges). 7-point Likert scale on 11 features aligned to Reddit themes. Open-ended questions on challenges, workarounds, and unmet needs. Distributed via university listservs.</p>
-                    </div>
-                    <div class="phase-col">
-                      <span class="phase-col-label">Findings</span>
-                      <p>Affordable pricing rated highest (mean 6.5/7); automation and clean design (5.9); gamification lowest (3.5). A strong anti-manual-entry consensus emerged. R4 articulated a pre-spending gap no existing tool addressed. R8 raised a financial agency gap — tools assume users control their income. R11 wanted analysis before planning, not budgeting before seeing spending patterns.</p>
-                    </div>
-                  </div>
-                  <div class="phase-contributes">
-                    <span class="phase-contributes-label">Contributed to Phase 4</span>
-                    <p>R4's cart-as-workaround strategy directly inspired the Waiting Room prototype feature. The pre-spending gap shaped the "Can I afford this?" widget. Individual variation in feature ratings (gamification ranged 1-7) confirmed that co-design sessions should treat divergence as signal, not noise. Survey participants opted in to co-design sessions.</p>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Phase 4 -->
-              <div class="phase-card phase-card-last">
-                <div class="phase-marker">
-                  <div class="phase-badge">Phase 4</div>
-                </div>
-                <div class="phase-content">
-                  <h5>Co-Design Sessions — n=5</h5>
-                  <div class="phase-cols">
-                    <div class="phase-col">
-                      <span class="phase-col-label">Motivation</span>
-                      <p>Survey responses revealed what participants wanted but not how they interacted with a real tool. Co-design sessions were needed to test a functional prototype, surface individual variation, and gather generative design ideas. Following Vines et al.'s "configuring participation" framework: divergence between participants was documented as meaningful data, not averaged out.</p>
-                    </div>
-                    <div class="phase-col">
-                      <span class="phase-col-label">Method</span>
-                      <p>5 sessions (45-60 min). Guided think-aloud walkthrough of 5 tasks on a functional Netlify prototype, followed by sticky-note ideation on 5 structured prompts. Two researchers following the same session guide. Individual reflection before group discussion to ensure no single voice dominated.</p>
-                    </div>
-                    <div class="phase-col">
-                      <span class="phase-col-label">Findings</span>
-                      <p>Friction thresholds ranged from $30 to $100 across 5 participants — confirming the Goldilocks principle at the individual level. The impulse intervention ("like having a friend tap you on the shoulder") was the most consistently praised feature. The Ally feature split cleanly along a privacy/accountability axis. Gamification ranged from enthusiastic adoption to active dismissal. Mood check-in embraced by those who link emotional state to spending, dismissed by those preferring factual interfaces.</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-            </div>
-
-            <div class="cs-findings">
-              <h4>Key Findings Across All Phases</h4>
-              <div class="findings-grid">
-                <div class="finding-stat">
-                  <span class="fstat-num">1,668</span>
-                  <span class="fstat-label">Reddit posts analyzed across 6 communities</span>
-                </div>
-                <div class="finding-stat">
-                  <span class="fstat-num">71%</span>
-                  <span class="fstat-label">of posts tagged Price/Value, the top Reddit theme</span>
-                </div>
-                <div class="finding-stat">
-                  <span class="fstat-num">6.5 / 7</span>
-                  <span class="fstat-label">mean rating for affordable pricing — highest survey feature</span>
-                </div>
-                <div class="finding-stat">
-                  <span class="fstat-num">$30 → $100</span>
-                  <span class="fstat-label">friction threshold range across 5 co-design participants</span>
-                </div>
-              </div>
-
-              <div class="insight-row">
-                <div class="insight-card">
-                  <p class="insight-quote">"I want this app to be annoying. I need the friction."</p>
-                  <span class="insight-attr">P05, High friction, $30 threshold</span>
-                </div>
-                <div class="insight-vs" aria-hidden="true">vs.</div>
-                <div class="insight-card">
-                  <p class="insight-quote">"I don't want to be nagged for small stuff."</p>
-                  <span class="insight-attr">P04, Low friction, $100 threshold</span>
-                </div>
-              </div>
-              <p class="insight-note">Same population, opposite needs. This divergence is not noise, it is the fundamental design requirement: a financial tool for ADHD must be configurable, not fixed around a single assumed user profile.</p>
-
-              <div class="finding-block">
-                <h5>Three Design Contributions</h5>
-                <div class="contrib-grid">
-                  <div class="contrib">
-                    <span class="contrib-num">1</span>
-                    <strong>Bespoke and Fluctuating Needs</strong>
-                    <p>Applying Mack et al.'s Goldilocks framework to ADHD finance: needs vary between individuals and within a single person throughout the day (medication timing, mood, time of night).</p>
-                  </div>
-                  <div class="contrib">
-                    <span class="contrib-num">2</span>
-                    <strong>Independence to Interdependence</strong>
-                    <p>The Ally model shifts from individual budgeting apps to collaborative accountability — user-controlled granularity, mutual rather than hierarchical sharing, with AI-based alternatives for privacy-preferring users.</p>
-                  </div>
-                  <div class="contrib">
-                    <span class="contrib-num">3</span>
-                    <strong>Reactive to Proactive</strong>
-                    <p>The Waiting Room feature (inspired by R4's cart-as-workaround), cooling-off prompts, and time-of-day adaptive friction, helping users <em>before</em> a risky financial decision, not after.</p>
-                  </div>
+              <div>
+                <h3 class="block-label">Process</h3>
+                <div class="phase-pills">
+                  <span class="phase-pill"><span class="pill-n">1</span> Lit Review</span>
+                  <span class="pill-arrow" aria-hidden="true">→</span>
+                  <span class="phase-pill"><span class="pill-n">2</span> Reddit</span>
+                  <span class="pill-arrow" aria-hidden="true">→</span>
+                  <span class="phase-pill"><span class="pill-n">3</span> Survey</span>
+                  <span class="pill-arrow" aria-hidden="true">→</span>
+                  <span class="phase-pill"><span class="pill-n">4</span> Co-Design</span>
                 </div>
               </div>
             </div>
 
-            <div class="cs-outcomes">
-              <h4>Prototype Iterations</h4>
-              <div class="outcome-row">
-                <div class="outcome-item">
-                  <span class="outcome-label">V1, Discourse-Informed</span>
-                  <p>Built after Reddit analysis. Low-fidelity Figma prototype: simplified dashboard, manual transaction entry, cooling-off prompts, basic budget categories.</p>
-                  <a href="https://relaxed-ganache-e8896a.netlify.app/" class="cs-link" target="_blank" rel="noopener">View V1 ↗</a>
-                </div>
-                <div class="outcome-item">
-                  <span class="outcome-label">V2, Survey-Refined</span>
-                  <p>Functional Netlify prototype. Added "Can I afford this?" widget, friction level selector during onboarding, amber/yellow overspending color, onboarding shortened from 15 to 10 steps.</p>
-                  <a href="https://moneytalk-adhd.netlify.app/" class="cs-link" target="_blank" rel="noopener">View V2 ↗</a>
-                </div>
-                <div class="outcome-item">
-                  <span class="outcome-label">V3, Co-Design</span>
-                  <p>Waiting Room concept, modular dashboard with hide/reveal toggles, mood check-in with adaptive friction, Ally feature with granular permission controls.</p>
-                  <span class="cs-link-static">Figma Prototype</span>
-                </div>
+            <div class="stat-row" aria-label="Key findings">
+              <div class="stat-box">
+                <span class="stat-n">1,668</span>
+                <span class="stat-l">Reddit posts analyzed across 6 communities</span>
+              </div>
+              <div class="stat-box">
+                <span class="stat-n">71%</span>
+                <span class="stat-l">of posts tagged Price/Value, the top theme</span>
+              </div>
+              <div class="stat-box">
+                <span class="stat-n">6.5/7</span>
+                <span class="stat-l">mean rating for affordable pricing in survey</span>
+              </div>
+              <div class="stat-box">
+                <span class="stat-n">$30–$100</span>
+                <span class="stat-l">friction threshold range across 5 participants</span>
               </div>
             </div>
 
+            <div class="insight-pair">
+              <div class="insight-box">
+                <p class="quote">"I want this app to be annoying. I need the friction."</p>
+                <span class="attr">P05 · High friction · $30 threshold</span>
+              </div>
+              <div class="insight-vs" aria-hidden="true">vs.</div>
+              <div class="insight-box">
+                <p class="quote">"I don't want to be nagged for small stuff."</p>
+                <span class="attr">P04 · Low friction · $100 threshold</span>
+              </div>
+            </div>
+            <p class="insight-note">Same population, opposite needs - the fundamental design requirement: the tool must be configurable, not built around a single assumed user.</p>
+
+            <h3 class="block-label" style="margin-top:1.5rem;">Prototype Iterations</h3>
+            <div class="outcome-row">
+              <div class="outcome-box">
+                <span class="outcome-label">V1 · Discourse-Informed</span>
+                <p>Low-fidelity Figma: simplified dashboard, cooling-off prompts, basic budget categories.</p>
+                <a href="https://relaxed-ganache-e8896a.netlify.app/" class="link-out" target="_blank" rel="noopener">View V1 ↗</a>
+              </div>
+              <div class="outcome-box">
+                <span class="outcome-label">V2 · Survey-Refined</span>
+                <p>Functional Netlify prototype: "Can I afford this?" widget, friction selector, onboarding 15→10 steps.</p>
+                <a href="https://moneytalk-adhd.netlify.app/" class="link-out" target="_blank" rel="noopener">View V2 ↗</a>
+              </div>
+              <div class="outcome-box">
+                <span class="outcome-label">V3 · Co-Design</span>
+                <p>Waiting Room, modular dashboard, mood check-in with adaptive friction, Ally feature with granular permissions.</p>
+                <span class="link-out-static">Figma Prototype</span>
+              </div>
+            </div>
           </div>
         </article>
 
-        <!-- ─── CS 2: Figma Color Filter ─── -->
-        <article class="case-study" id="cs-colorfilter" aria-labelledby="cs2-heading">
-          <div class="cs-header cs-header-teal">
-            <div class="cs-header-inner">
-              <div class="cs-meta">
-                <span class="cs-number">02</span>
-                <div class="cs-tags">
-                  <span class="cstag">Experiment</span>
-                  <span class="cstag">Pre-Registered</span>
-                  <span class="cstag">Color Vision</span>
-                  <span class="cstag">Figma Plugin</span>
-                </div>
+        <!-- CS 02: Figma Color Filter -->
+        <article class="cs-card" aria-labelledby="cs2-title">
+          <div class="cs-card-header cs-purple">
+            <div class="cs-meta">
+              <span class="cs-num">02</span>
+              <div class="cs-tags">
+                <span class="tag">Experiment</span>
+                <span class="tag">Pre-Registered</span>
+                <span class="tag">Color Vision</span>
+                <span class="tag">Figma Plugin</span>
               </div>
-              <h3 id="cs2-heading">Accessible Figma: Color Filter for Deuteranopia</h3>
-              <p class="cs-subtitle">A pre-registered 2×2 factorial experiment testing whether a custom assistive color filter plugin improves task performance for designers who have deuteranopia, not just those designing for them.</p>
             </div>
+            <h2 class="cs-title" id="cs2-title">Accessible Figma: Color Filter for Deuteranopia</h2>
+            <p class="cs-sub">A pre-registered 2×2 factorial experiment testing whether a custom assistive color filter plugin improves task performance for designers who <em>have</em> deuteranopia, not just those designing for them.</p>
           </div>
-
           <div class="cs-body">
-
-            <div class="cs-overview">
-              <div class="cs-block">
-                <h4>The Problem</h4>
-                <p>Figma's built-in color blindness simulation filters were designed exclusively for normal-vision designers to <em>preview</em> how their work looks to color-blind users. No major design tool currently offers a feature to assist designers who <em>themselves</em> have color vision deficiency in performing color-dependent work.</p>
-                <p>A common concern among UX professionals is that implementing accessibility accommodations may degrade the experience for the general user base, an assumption that lacks empirical support but frequently delays or blocks accessibility investment.</p>
+            <div class="cs-two-col">
+              <div>
+                <h3 class="block-label">The Problem</h3>
+                <p>Figma's built-in color blindness filters were designed for normal-vision designers to <em>preview</em> how their work looks to color-blind users. No major design tool offers a feature to assist designers who <em>themselves</em> have color vision deficiency.</p>
               </div>
-              <div class="cs-block">
-                <h4>The Approach</h4>
-                <div class="design-table">
-                  <div class="design-cell design-cell-header">
-                    <span></span>
-                    <span>Filter OFF</span>
-                    <span>Filter ON</span>
-                  </div>
-                  <div class="design-cell">
-                    <span><strong>Deuteranopia</strong></span>
-                    <span>Group A<br><small>n=10</small></span>
-                    <span>Group B<br><small>n=10</small></span>
-                  </div>
-                  <div class="design-cell">
-                    <span><strong>Normal vision</strong></span>
-                    <span>Group C<br><small>n=10</small></span>
-                    <span>Group D<br><small>n=10</small></span>
-                  </div>
-                </div>
-                <p style="font-size:0.85rem;color:var(--text-muted);margin-top:0.75rem;">2×2 between-subjects ANOVA. Four color-dependent tasks in Figma: color matching, contrast identification, status color application, spot-the-difference. Pre-registered on OSF. Bayesian ANOVA (JASP) as supplementary analysis.</p>
+              <div>
+                <h3 class="block-label">Design: 2×2 Between-Subjects</h3>
+                <table class="exp-table" aria-label="Experiment design">
+                  <thead>
+                    <tr><th></th><th>Filter OFF</th><th>Filter ON</th></tr>
+                  </thead>
+                  <tbody>
+                    <tr><td>Deuteranopia</td><td>Group A · n=10</td><td>Group B · n=10</td></tr>
+                    <tr><td>Normal vision</td><td>Group C · n=10</td><td>Group D · n=10</td></tr>
+                  </tbody>
+                </table>
               </div>
             </div>
 
-            <div class="cs-findings">
-              <h4>Results</h4>
-              <div class="findings-grid findings-grid-4">
-                <div class="finding-stat finding-stat-good">
-                  <span class="fstat-num">−43s</span>
-                  <span class="fstat-label">Reduction in task completion time for deuteranopic users with filter</span>
-                </div>
-                <div class="finding-stat finding-stat-good">
-                  <span class="fstat-num">−49%</span>
-                  <span class="fstat-label">Error rate reduction (5.1 → 2.6 errors) for deuteranopic users</span>
-                </div>
-                <div class="finding-stat finding-stat-good">
-                  <span class="fstat-num">−11</span>
-                  <span class="fstat-label">Fewer clicks required for deuteranopic users with filter on</span>
-                </div>
-                <div class="finding-stat finding-stat-neutral">
-                  <span class="fstat-num">n.s.</span>
-                  <span class="fstat-label">Effect on normal-vision users, no significant difference on any measure</span>
-                </div>
+            <div class="stat-row" aria-label="Key results">
+              <div class="stat-box stat-good">
+                <span class="stat-n">−43s</span>
+                <span class="stat-l">Task time reduction for deuteranopic users with filter</span>
               </div>
-
-              <div class="results-comparison">
-                <div class="results-bar-group">
-                  <h5>Task Completion Time (seconds)</h5>
-                  <div class="bar-row">
-                    <span class="bar-label">Deuteranopia, no filter</span>
-                    <div class="bar-track"><div class="bar-fill bar-bad" style="width:100%"><span>158s</span></div></div>
-                  </div>
-                  <div class="bar-row">
-                    <span class="bar-label">Deuteranopia, filter on</span>
-                    <div class="bar-track"><div class="bar-fill bar-good" style="width:73%"><span>115s</span></div></div>
-                  </div>
-                  <div class="bar-row">
-                    <span class="bar-label">Normal vision, no filter</span>
-                    <div class="bar-track"><div class="bar-fill bar-neutral" style="width:49%"><span>78s</span></div></div>
-                  </div>
-                  <div class="bar-row">
-                    <span class="bar-label">Normal vision, filter on</span>
-                    <div class="bar-track"><div class="bar-fill bar-neutral" style="width:58%"><span>92s</span></div></div>
-                  </div>
-                </div>
+              <div class="stat-box stat-good">
+                <span class="stat-n">−49%</span>
+                <span class="stat-l">Error rate reduction (5.1 → 2.6 errors)</span>
               </div>
-
-              <div class="finding-block">
-                <h5>Interpretation</h5>
-                <p>All three interaction effects were significant (p &lt; .05), supporting H1 (completion time), H2 (error rate), and H3 (click count). With the filter on, deuteranopic users were no longer significantly different from normal-vision users on any measure, the filter partially closes the performance gap. Bayesian analysis (BF₁₀ = 32.90 for the full model) provided very strong evidence for the interaction. The practical takeaway addresses the common concern directly: <strong>accessibility features designed for a specific group do not penalize general users.</strong></p>
+              <div class="stat-box stat-good">
+                <span class="stat-n">−11</span>
+                <span class="stat-l">Fewer clicks for deuteranopic users with filter on</span>
+              </div>
+              <div class="stat-box">
+                <span class="stat-n">n.s.</span>
+                <span class="stat-l">Effect on normal-vision users - no significant difference</span>
               </div>
             </div>
-
-            <div class="cs-outcomes">
-              <h4>Open Science</h4>
-              <div class="outcome-row">
-                <div class="outcome-item">
-                  <span class="outcome-label">Pre-registered Protocol</span>
-                  <p>Stage 1 registered report submitted before data collection. Protocol deviations (JASP implementation) documented in Section 5.9 of the report.</p>
-                </div>
-                <div class="outcome-item">
-                  <span class="outcome-label">Open Data</span>
-                  <p>All data, analysis files (JASP), and the Stage 1 registered protocol available in the project repository.</p>
-                </div>
-                <div class="outcome-item">
-                  <span class="outcome-label">Custom Plugin</span>
-                  <p>Figma plugin built for the study remaps red-green color distinctions to blue-yellow equivalents, designed for active design work, not simulation.</p>
-                </div>
-              </div>
-            </div>
-
+            <p class="insight-note">Bayesian analysis: BF₁₀ = 32.90 - very strong evidence for the interaction. <strong>Accessibility features designed for a specific group do not penalize general users.</strong></p>
           </div>
         </article>
 
-        <!-- ─── CS 3: LSS Figma Prototyping ─── -->
-        <article class="case-study" id="cs-lss" aria-labelledby="cs3-heading">
-          <div class="cs-header cs-header-warm">
-            <div class="cs-header-inner">
-              <div class="cs-meta">
-                <span class="cs-number">03</span>
-                <div class="cs-tags">
-                  <span class="cstag">Lean Six Sigma</span>
-                  <span class="cstag">DMAIC</span>
-                  <span class="cstag">Process Improvement</span>
-                  <span class="cstag">Figma</span>
-                </div>
+        <!-- CS 03: LSS -->
+        <article class="cs-card" aria-labelledby="cs3-title">
+          <div class="cs-card-header cs-dark">
+            <div class="cs-meta">
+              <span class="cs-num">03</span>
+              <div class="cs-tags">
+                <span class="tag">Lean Six Sigma</span>
+                <span class="tag">DMAIC</span>
+                <span class="tag">Process Improvement</span>
+                <span class="tag">Figma</span>
               </div>
-              <h3 id="cs3-heading">Improving Figma's Prototyping Workflow</h3>
-              <p class="cs-subtitle">A Lean Six Sigma DMAIC project applying statistical process control, DOE, and waste analysis to reduce UX prototype creation time from 47 minutes to a projected 22.</p>
             </div>
+            <h2 class="cs-title" id="cs3-title">Improving Figma's Prototyping Workflow</h2>
+            <p class="cs-sub">A Lean Six Sigma DMAIC project applying statistical process control, DOE, and waste analysis to reduce UX prototype creation time from 47 minutes to a projected 22.</p>
           </div>
-
           <div class="cs-body">
-
-            <div class="cs-overview">
-              <div class="cs-block">
-                <h4>The Problem</h4>
-                <p>UX designers using Figma spent an average of 47.2 minutes creating interactive prototypes, nearly twice the target of 25 minutes. With a DPMO of 958,968 (less than 1 sigma), the prototyping process was effectively failing for the vast majority of design work.</p>
-                <p>Voice of the Customer interviews revealed the core frustration: designers were being forced to build workarounds for missing features rather than actually prototyping. "It's 2026 and we still can't do basic inputs," said one UX Lead at a FinTech company. Many designers skipped prototyping entirely and handed static mockups to developers instead.</p>
+            <div class="cs-two-col">
+              <div>
+                <h3 class="block-label">The Problem</h3>
+                <p>UX designers spent an average of 47.2 minutes creating interactive prototypes - nearly twice the 25-minute target. DPMO of 958,968 (&lt;1 sigma). 60% of creation time was non-value-adding waste. Many designers skipped prototyping entirely, handing static mockups to developers instead.</p>
               </div>
-              <div class="cs-block">
-                <h4>DMAIC Framework</h4>
-                <div class="method-steps">
-                  <div class="method-step">
-                    <span class="step-num step-num-amber">D</span>
-                    <div>
-                      <strong>Define</strong>
-                      <p>VOC interviews, Project Charter. Goal: reduce mean prototype time below 25 min.</p>
-                    </div>
-                  </div>
-                  <div class="method-step">
-                    <span class="step-num step-num-amber">M</span>
-                    <div>
-                      <strong>Measure</strong>
-                      <p>Statistical Process Control charts, 1-sample Z-test (p &lt; .0001 rejecting H₀ that mean ≤ 25 min), DPMO calculation.</p>
-                    </div>
-                  </div>
-                  <div class="method-step">
-                    <span class="step-num step-num-amber">A</span>
-                    <div>
-                      <strong>Analyze</strong>
-                      <p>8-step current process map, 2³ Design of Experiments (16 runs), waste identification across 5 categories, Ishikawa diagram across Tools, Process, People, Environment, Materials.</p>
-                    </div>
-                  </div>
-                  <div class="method-step">
-                    <span class="step-num step-num-amber">I</span>
-                    <div>
-                      <strong>Improve</strong>
-                      <p>Recommendations: pre-built interactive component kit, auto-layout enforcement, variables &amp; conditionals for states, prototype template library. 8 steps → 6 steps.</p>
-                    </div>
-                  </div>
-                  <div class="method-step">
-                    <span class="step-num step-num-amber">C</span>
-                    <div>
-                      <strong>Control</strong>
-                      <p>Standard operating procedures, training plan, KPI dashboard (avg time, rework rate, template reuse rate), continuous feedback loop.</p>
-                    </div>
-                  </div>
+              <div>
+                <h3 class="block-label">DMAIC</h3>
+                <div class="dmaic-steps">
+                  <div class="dmaic-step"><span class="dmaic-letter">D</span><span>Define - VOC interviews, Project Charter</span></div>
+                  <div class="dmaic-step"><span class="dmaic-letter">M</span><span>Measure - SPC charts, 1-sample Z-test (p &lt; .0001)</span></div>
+                  <div class="dmaic-step"><span class="dmaic-letter">A</span><span>Analyze - 2³ DOE (16 runs), waste map, Ishikawa</span></div>
+                  <div class="dmaic-step"><span class="dmaic-letter">I</span><span>Improve - component kit, auto-layout, variables</span></div>
+                  <div class="dmaic-step"><span class="dmaic-letter">C</span><span>Control - SOPs, KPI dashboard, feedback loop</span></div>
                 </div>
               </div>
             </div>
 
-            <div class="cs-findings">
-              <h4>Key Findings</h4>
-              <div class="findings-grid">
-                <div class="finding-stat finding-stat-bad">
-                  <span class="fstat-num">958,968</span>
-                  <span class="fstat-label">DPMO before improvement (&lt;1 sigma)</span>
-                </div>
-                <div class="finding-stat">
-                  <span class="fstat-num">60%</span>
-                  <span class="fstat-label">of prototype creation time was non-value-adding waste</span>
-                </div>
-                <div class="finding-stat finding-stat-good">
-                  <span class="fstat-num">−19.5 min</span>
-                  <span class="fstat-label">Average time saved by adopting a pre-built component library (DOE)</span>
-                </div>
-                <div class="finding-stat">
-                  <span class="fstat-num">25%</span>
-                  <span class="fstat-label">of total time lost to over-processing: manually building fake form inputs</span>
-                </div>
+            <div class="stat-row">
+              <div class="stat-box stat-bad">
+                <span class="stat-n">958,968</span>
+                <span class="stat-l">DPMO before improvement (&lt;1 sigma)</span>
               </div>
-
-              <div class="process-flow">
-                <h5>Current Process Map, Waste Identified</h5>
-                <div class="flow-steps">
-                  <div class="flow-step">Create static screens<span class="flow-time">8 min</span></div>
-                  <div class="flow-arrow" aria-hidden="true">→</div>
-                  <div class="flow-step">Duplicate frames for states<span class="flow-time">5 min</span></div>
-                  <div class="flow-arrow" aria-hidden="true">→</div>
-                  <div class="flow-step flow-step-waste">Manually build fake inputs<span class="flow-time">12 min ⚠</span></div>
-                  <div class="flow-arrow" aria-hidden="true">→</div>
-                  <div class="flow-step">Connect interactions<span class="flow-time">7 min</span></div>
-                  <div class="flow-arrow" aria-hidden="true">→</div>
-                  <div class="flow-step flow-step-waste">Test &amp; debug / Revise broken flows<span class="flow-time">9 min ⚠</span></div>
-                  <div class="flow-arrow" aria-hidden="true">→</div>
-                  <div class="flow-step">Share for testing<span class="flow-time">2 min</span></div>
-                </div>
-                <p class="flow-note">⚠ Red steps: primary waste areas. Together account for 21 of 47 minutes (45%).</p>
+              <div class="stat-box">
+                <span class="stat-n">60%</span>
+                <span class="stat-l">of prototype time was non-value-adding waste</span>
               </div>
-
-              <div class="finding-block">
-                <h5>DOE, What Actually Reduces Prototype Time</h5>
-                <p>A 2³ factorial design (16 runs, 2 replicates) tested three factors: pre-built component library, auto-layout enforcement, and Figma variables/conditionals. All three main effects were statistically significant (p &lt; .001). No significant interactions between factors. The component library had the largest effect, reducing prototype time by an average of 19.5 minutes.</p>
+              <div class="stat-box stat-good">
+                <span class="stat-n">−19.5 min</span>
+                <span class="stat-l">Time saved by pre-built component library (DOE)</span>
+              </div>
+              <div class="stat-box stat-good">
+                <span class="stat-n">47→22 min</span>
+                <span class="stat-l">Projected reduction in prototype creation time</span>
               </div>
             </div>
-
-            <div class="cs-outcomes">
-              <h4>Projected Impact</h4>
-              <div class="outcome-row">
-                <div class="outcome-item outcome-item-highlight">
-                  <span class="outcome-label">Time</span>
-                  <p><strong>47.2 min → 22.4 min</strong><br>52% reduction in average prototype creation time. Below the 25-minute target.</p>
-                </div>
-                <div class="outcome-item outcome-item-highlight">
-                  <span class="outcome-label">Quality</span>
-                  <p><strong>958,968 → ~290,000 DPMO</strong><br>68% fewer defects. Process moves from &lt;1 sigma toward 2 sigma.</p>
-                </div>
-                <div class="outcome-item outcome-item-highlight">
-                  <span class="outcome-label">Process</span>
-                  <p><strong>8 steps → 6 steps</strong><br>Manual input-building and frame duplication eliminated. Interactions managed via variables in-place.</p>
-                </div>
-              </div>
-              <p class="outcome-note">With Sandra Igitego · Tufts Gordon Institute · EM 0211 Lean Six Sigma · Spring 2026</p>
-            </div>
-
+            <p class="insight-note" style="margin-top:0.75rem;">With Sandra Igitego · Tufts Gordon Institute · EM 0211 Lean Six Sigma · Spring 2026</p>
           </div>
         </article>
 
       </div>
-    </section>
+    </div>
 
-    <!-- ═══════════ RESEARCH ═══════════ -->
-    <section id="research" class="section section-sage" aria-labelledby="research-heading">
-      <div class="container">
-        <p class="section-label">Research &amp; Writing</p>
-        <h2 id="research-heading">Reading, critiquing, connecting.</h2>
-        <p class="section-intro">I write about the papers I read the way I think about them: with skepticism, specific suggestions, and connections to adjacent work.</p>
+    <!-- ─── WORK EXPERIENCE WINDOW ─── -->
+    <div class="window window-folder" id="window-work-experience" hidden
+         role="dialog" aria-labelledby="win-work-title" aria-modal="false"
+         style="left:12vw; top:5rem;">
+      <div class="window-titlebar" data-drag="window-work-experience">
+        <div class="window-title-group">
+          <span class="window-dot" aria-hidden="true"></span>
+          <span class="window-title" id="win-work-title">💼 Work Experience</span>
+        </div>
+        <button class="wctrl wctrl-close" data-close="window-work-experience" aria-label="Close">×</button>
+      </div>
+      <div class="window-content folder-content">
+
+        <div class="work-layout">
+          <section aria-labelledby="exp-heading">
+            <h2 class="section-heading" id="exp-heading">Experience</h2>
+            <div class="timeline">
+
+              <div class="tl-item">
+                <div class="tl-marker" aria-hidden="true"></div>
+                <div class="tl-body">
+                  <div class="tl-header">
+                    <h3 class="tl-role">UX Designer</h3>
+                    <span class="tl-date">Jan 2026 – Present</span>
+                  </div>
+                  <p class="tl-org">Women in Tech, Tufts University · USA</p>
+                  <ul class="tl-bullets">
+                    <li>WIT Tufts provides a safe and supportive space for women and non-binary individuals in tech.</li>
+                    <li>Led redesign of the WIT website, conducted user research, wireframed, and prototyped the new accessible design.</li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="tl-item">
+                <div class="tl-marker" aria-hidden="true"></div>
+                <div class="tl-body">
+                  <div class="tl-header">
+                    <h3 class="tl-role">UX and Legal Researcher</h3>
+                    <span class="tl-date">Jan 2026 – Present</span>
+                  </div>
+                  <p class="tl-org">IDEA Lab @ Fletcher, Tufts University</p>
+                  <ul class="tl-bullets">
+                    <li>Designing an app accessible to migrants in the USA to navigate legal, food, and shelter resources.</li>
+                    <li>Features include multilingual support, simplified UI, and a built-in voice assistant.</li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="tl-item">
+                <div class="tl-marker" aria-hidden="true"></div>
+                <div class="tl-body">
+                  <div class="tl-header">
+                    <h3 class="tl-role">UX + AI Digital Marketing &amp; Operations Intern</h3>
+                    <span class="tl-date">Jul 2025 – Dec 2025</span>
+                  </div>
+                  <p class="tl-org">Tulip Interfaces · USA</p>
+                  <ul class="tl-bullets">
+                    <li>Built a central insight platform linking Planhat, Salesforce, and 7,000+ Gong calls to surface customer data and product feedback trends.</li>
+                    <li>Designed n8n automations cutting manual input by 80%.</li>
+                    <li>Automated video and content analysis workflows using ChatGPT and A/B testing, improving watch time and CTR.</li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="tl-item">
+                <div class="tl-marker" aria-hidden="true"></div>
+                <div class="tl-body">
+                  <div class="tl-header">
+                    <h3 class="tl-role">Student Consultant</h3>
+                    <span class="tl-date">Jun 2025 – Present</span>
+                  </div>
+                  <p class="tl-org">IBM · USA</p>
+                  <ul class="tl-bullets">
+                    <li>Evaluated voice-interaction and AR interface usability for connected vehicles.</li>
+                    <li>Combined interviews, contextual inquiry, and telemetry analysis to reduce cognitive load by 32%.</li>
+                    <li>Delivered research-based design recommendations on trust, safety, and compliance.</li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="tl-item">
+                <div class="tl-marker" aria-hidden="true"></div>
+                <div class="tl-body">
+                  <div class="tl-header">
+                    <h3 class="tl-role">Business Analyst</h3>
+                    <span class="tl-date">Sep 2022 – May 2024</span>
+                  </div>
+                  <p class="tl-org">Deloitte India · Karnataka</p>
+                  <ul class="tl-bullets">
+                    <li>Led Generative AI training using Reinforcement Learning for Amazon, improving model accuracy by 30%.</li>
+                    <li>Led a 20-member team to design RLHF-based QA processes, accelerating model deployment by 20%.</li>
+                    <li>Root cause analysis on 200+ ERP data discrepancies, improving data accuracy by 30%.</li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="tl-item">
+                <div class="tl-marker" aria-hidden="true"></div>
+                <div class="tl-body">
+                  <div class="tl-header">
+                    <h3 class="tl-role">Business Analyst Intern</h3>
+                    <span class="tl-date">Jan 2022 – Jul 2022</span>
+                  </div>
+                  <p class="tl-org">Deloitte India · Karnataka</p>
+                  <ul class="tl-bullets">
+                    <li>Designed automated Salesforce CRM workflows with RPA tools, reducing manual input by 66%, achieving 95% data accuracy.</li>
+                    <li>Built B2B lead prioritization dashboards, 20% increase in sales pipeline.</li>
+                  </ul>
+                </div>
+              </div>
+
+            </div>
+          </section>
+
+          <aside class="work-sidebar" aria-label="Education and skills">
+            <div class="sidebar-card">
+              <p class="sidebar-label">Education</p>
+              <div class="edu-entry">
+                <span class="edu-year">Expected May 2026</span>
+                <h3 class="edu-degree">MS, Engineering Management</h3>
+                <p class="edu-school">Tufts University · Boston, MA</p>
+                <span class="edu-gpa">GPA 3.78 / 4.0</span>
+                <p class="edu-courses">HCI for Disability · Experimental Methods · Lean Six Sigma</p>
+              </div>
+              <hr class="edu-divider" aria-hidden="true">
+              <div class="edu-entry">
+                <span class="edu-year">Aug 2018 – Jul 2022</span>
+                <h3 class="edu-degree">B.Tech, Electrical &amp; Electronics Engineering</h3>
+                <p class="edu-school">Manipal Institute of Technology · India</p>
+                <span class="edu-gpa">GPA 3.48 / 4.0 · Minor: Digital Marketing</span>
+              </div>
+            </div>
+
+            <div class="sidebar-card">
+              <p class="sidebar-label">Skills</p>
+              <div class="skill-group">
+                <span class="skill-label">Research &amp; Design</span>
+                <p class="skill-list">Figma · Dovetail · Maze · Affinity Mapping · Co-Design · Think-Aloud · Usability Testing</p>
+              </div>
+              <div class="skill-group">
+                <span class="skill-label">Data &amp; Methods</span>
+                <p class="skill-list">Python · SQL · Tableau · JASP · Thematic Coding · Bayesian ANOVA · Survey Design</p>
+              </div>
+              <div class="skill-group">
+                <span class="skill-label">AI &amp; Automation</span>
+                <p class="skill-list">RLHF · Prompt Design · LLM Evaluation · n8n · Zapier · Salesforce</p>
+              </div>
+            </div>
+          </aside>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- ─── RESEARCH WINDOW ─── -->
+    <div class="window window-folder" id="window-research" hidden
+         role="dialog" aria-labelledby="win-res-title" aria-modal="false"
+         style="left:16vw; top:6rem;">
+      <div class="window-titlebar" data-drag="window-research">
+        <div class="window-title-group">
+          <span class="window-dot" aria-hidden="true"></span>
+          <span class="window-title" id="win-res-title">🔬 Research</span>
+        </div>
+        <button class="wctrl wctrl-close" data-close="window-research" aria-label="Close">×</button>
+      </div>
+      <div class="window-content folder-content">
+
+        <div class="folder-header-bar">
+          <p class="folder-intro">Reading, critiquing, connecting. I write about papers with skepticism, specific suggestions, and connections to adjacent work.</p>
+        </div>
 
         <div class="research-grid">
 
-          <a href="hci-portfolio.html" class="research-card" aria-labelledby="r1-heading">
-            <div class="research-card-top research-top-green">
-              <span class="research-icon" aria-hidden="true">♿</span>
-              <div class="research-card-tags">
-                <span class="rtag">11 Reading Sets</span>
-                <span class="rtag">25+ Papers</span>
-                <span class="rtag">Community Voices</span>
+          <a href="hci-portfolio.html" class="res-card" aria-labelledby="r1-title">
+            <div class="res-card-top res-green">
+              <span class="res-icon" aria-hidden="true">♿</span>
+              <div class="res-tags">
+                <span class="tag">11 Reading Sets</span>
+                <span class="tag">25+ Papers</span>
+                <span class="tag">Community Voices</span>
               </div>
             </div>
-            <div class="research-card-body">
-              <h3 id="r1-heading">HCI for Disability, Reading Portfolio</h3>
-              <p>Eleven reading sets from CS 0172 at Tufts, synthesized into five cross-cutting themes: the Foundation Problem, Invisible Labour, AI as Tool vs. Gatekeeper, Fluctuating &amp; Diverse Needs, and What Good Looks Like. Grounded in ASSETS '22–'24 and CHI '22 papers. Includes real community data on AI coding tool accessibility failures from GitHub, developer forums, and 2025 CHI research.</p>
-              <span class="research-cta">View Portfolio →</span>
-            </div>
-          </a>
-
-          <a href="https://accessibilityvisibility.netlify.app/" class="research-card" target="_blank" rel="noopener" aria-labelledby="r2-heading">
-            <div class="research-card-top research-top-sage">
-              <span class="research-icon" aria-hidden="true">📓</span>
-              <div class="research-card-tags">
-                <span class="rtag">Ongoing</span>
-                <span class="rtag">Astro + Netlify</span>
-              </div>
-            </div>
-            <div class="research-card-body">
-              <h3 id="r2-heading">Accessibility Visibility</h3>
-              <p>A running notebook of paper critiques on disability, HCI, and assistive technology. Each entry distills the argument, what the paper misses, and what should come next. Written in the style of a researcher who is also a practitioner, more skeptical than a summary, more constructive than a review.</p>
-              <span class="research-cta">accessibilityvisibility.netlify.app ↗</span>
+            <div class="res-body">
+              <h3 class="res-title" id="r1-title">HCI for Disability - Reading Portfolio</h3>
+              <p>Eleven reading sets from CS 0172 at Tufts, synthesized into five cross-cutting themes: the Foundation Problem, Invisible Labour, AI as Tool vs. Gatekeeper, Fluctuating &amp; Diverse Needs, and What Good Looks Like.</p>
+              <span class="res-cta">View Portfolio →</span>
             </div>
           </a>
 
+          <a href="https://accessibilityvisibility.netlify.app/" class="res-card" target="_blank" rel="noopener" aria-labelledby="r2-title">
+            <div class="res-card-top res-purple">
+              <span class="res-icon" aria-hidden="true">📓</span>
+              <div class="res-tags">
+                <span class="tag">Ongoing</span>
+                <span class="tag">Astro + Netlify</span>
+              </div>
+            </div>
+            <div class="res-body">
+              <h3 class="res-title" id="r2-title">Accessibility Visibility</h3>
+              <p>A running notebook of paper critiques on disability, HCI, and assistive technology. Each entry distills the argument, what the paper misses, and what should come next.</p>
+              <span class="res-cta">accessibilityvisibility.netlify.app ↗</span>
+            </div>
+          </a>
+
         </div>
-      </div>
-    </section>
-
-    <!-- ═══════════ EXPERIENCE ═══════════ -->
-    <section id="experience" class="section" aria-labelledby="exp-heading">
-      <div class="container">
-        <p class="section-label">Experience</p>
-        <h2 id="exp-heading">Where I've worked.</h2>
-
-        <div class="exp-grid">
-          <div class="timeline">
-
-            <div class="tl-item">
-              <div class="tl-dot" aria-hidden="true"></div>
-              <div class="tl-content">
-                <div class="tl-header">
-                  <h3>UX Designer</h3>
-                  <span class="tl-date">Jan 2026 – Present</span>
-                </div>
-                <p class="tl-org">Women in Tech, Tufts University · USA</p>
-                <ul class="tl-bullets">
-                  <li> WIT Tufts is a student-run organization that provides a safe and supportive space for women and non-binary individuals in tech.</li>
-                  <li>As a UX designer, I worked on the redesign of the WIT Tufts website to make it more accessible and user-friendly. I conducted user research, wireframed, and prototyped the new design.</li>
-                </ul>
-              </div>
-            </div>
-            
-            <div class="tl-item">
-              <div class="tl-dot" aria-hidden="true"></div>
-              <div class="tl-content">
-                <div class="tl-header">
-                  <h3>UX and Legal Researcher</h3>
-                  <span class="tl-date">Jan 2026 – Present</span>
-                </div>
-                <p class="tl-org">IDEA Lab @ Fletcher, Tufts University</p>
-                <ul class="tl-bullets">
-                  <li>Designing an app that is accessible to migrant in USA to navigate the legal, food, and shelter sources. </li>
-                  <li>This app has features that are accessible to migrants with different languages and abilities with a built in simpliefied UI and voice assistant.</li>
-                </ul>
-              </div>
-            </div>
-
-            <div class="tl-item">
-              <div class="tl-dot" aria-hidden="true"></div>
-              <div class="tl-content">
-                <div class="tl-header">
-                  <h3>UX + AI Digital Marketing &amp; Operations Intern</h3>
-                  <span class="tl-date">Jul 2025 – Dec</span>
-                </div>
-                <p class="tl-org">Tulip Interfaces · USA</p>
-                <ul class="tl-bullets">
-                  <li>Built a central insight platform linking Planhat, Salesforce, and 7,000+ Gong calls to surface customer data, case-study leads, and product feedback trends.</li>
-                  <li>Designed n8n automations to clean, merge, and route marketing and CRM data, cutting manual input by 80%.</li>
-                  <li>Automated video and content analysis workflows using ChatGPT and A/B testing, improving watch time and click-through rate.</li>
-                </ul>
-              </div>
-            </div>
-
-            <div class="tl-item">
-              <div class="tl-dot" aria-hidden="true"></div>
-              <div class="tl-content">
-                <div class="tl-header">
-                  <h3>Student Consultant</h3>
-                  <span class="tl-date">Jun 2025 – Present</span>
-                </div>
-                <p class="tl-org">IBM · USA</p>
-                <ul class="tl-bullets">
-                  <li>Partnered with UX + Engineering to evaluate voice-interaction and AR interface usability for connected vehicles.</li>
-                  <li>Combined interviews, contextual inquiry, and telemetry analysis to reduce cognitive load by 32%.</li>
-                  <li>Delivered research-based design recommendations on trust, safety, and compliance.</li>
-                </ul>
-              </div>
-            </div>
-
-            <div class="tl-item">
-              <div class="tl-dot" aria-hidden="true"></div>
-              <div class="tl-content">
-                <div class="tl-header">
-                  <h3>Business Analyst</h3>
-                  <span class="tl-date">Sep 2022 – May 2024</span>
-                </div>
-                <p class="tl-org">Deloitte India · Karnataka</p>
-                <ul class="tl-bullets">
-                  <li>Led Generative AI training using Reinforcement Learning for Amazon, improving model accuracy by 30%.</li>
-                  <li>Led a 20-member team to design RLHF-based QA processes, accelerating model deployment by 20%.</li>
-                  <li>Root cause analysis on 200+ ERP data discrepancies, improving data accuracy by 30%.</li>
-                </ul>
-              </div>
-            </div>
-
-            <div class="tl-item">
-              <div class="tl-dot" aria-hidden="true"></div>
-              <div class="tl-content">
-                <div class="tl-header">
-                  <h3>Business Analyst Intern</h3>
-                  <span class="tl-date">Jan 2022 – Jul 2022</span>
-                </div>
-                <p class="tl-org">Deloitte India · Karnataka</p>
-                <ul class="tl-bullets">
-                  <li>Designed automated Salesforce CRM workflows with RPA tools, reducing manual input by 66%, achieving 95% data accuracy.</li>
-                  <li>Built B2B lead prioritization dashboards, resulting in a 20% increase in sales pipeline.</li>
-                </ul>
-              </div>
-            </div>
-
-          </div>
-
-          <div class="edu-sidebar">
-            <div class="edu-card">
-              <p class="edu-card-label">Education</p>
-              <div class="edu-entry">
-                <span class="edu-year">Expected May 2026</span>
-                <h4>MS, Engineering Management</h4>
-                <p class="edu-school">Tufts University · Boston, MA</p>
-                <p class="edu-gpa">GPA 3.78/4.0</p>
-                <p class="edu-courses">Current: HCI for Disability · Experimental Methods · Lean Six Sigma</p>
-              </div>
-              <div class="edu-divider"></div>
-              <div class="edu-entry">
-                <span class="edu-year">Aug 2018 – Jul 2022</span>
-                <h4>B.Tech, Electrical &amp; Electronics Engineering</h4>
-                <p class="edu-school">Manipal Institute of Technology · India</p>
-                <p class="edu-gpa">GPA 3.48/4.0 · Minor: Digital Marketing</p>
-              </div>
-            </div>
-
-            <div class="skills-card">
-              <p class="edu-card-label">Skills</p>
-              <div class="skill-group">
-                <span class="skill-group-label">Research &amp; Design</span>
-                <p>Figma · Dovetail · Maze · Affinity Mapping · Co-Design · Think-Aloud · Usability Testing</p>
-              </div>
-              <div class="skill-group">
-                <span class="skill-group-label">Data &amp; Methods</span>
-                <p>Python · SQL · Tableau · JASP · Thematic Coding · Bayesian ANOVA · Survey Design</p>
-              </div>
-              <div class="skill-group">
-                <span class="skill-group-label">AI &amp; Automation</span>
-                <p>RLHF · Prompt Design · LLM Evaluation · n8n · Zapier · Salesforce</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ═══════════ CONTACT ═══════════ -->
-    <section id="contact" class="section section-sage" aria-labelledby="contact-heading">
-      <div class="container">
-        <div class="contact-inner">
-          <p class="section-label">Contact</p>
-          <h2 id="contact-heading">Let's talk.</h2>
-          <p class="contact-sub">I'm interested in HCI research, product design, and roles where accessibility is treated as an engineering problem, not a compliance checkbox.</p>
-          <div class="contact-links">
-            <a href="mailto:shruti.chandra@tufts.edu" class="contact-link">
-              <span class="contact-icon" aria-hidden="true">✉</span>
-              <span class="contact-detail">
-                <span class="contact-label">Email</span>
-                <span class="contact-value">shruti.chandra@tufts.edu</span>
-              </span>
-            </a>
-            <a href="https://www.linkedin.com/in/shruti-chandra-118a661b2/" class="contact-link" target="_blank" rel="noopener">
-              <span class="contact-icon" aria-hidden="true">🔗</span>
-              <span class="contact-detail">
-                <span class="contact-label">LinkedIn</span>
-                <span class="contact-value">linkedin.com/in/shruti-chandra-118a661b2</span>
-              </span>
-            </a>
-            <a href="https://accessibilityvisibility.netlify.app/" class="contact-link" target="_blank" rel="noopener">
-              <span class="contact-icon" aria-hidden="true">📓</span>
-              <span class="contact-detail">
-                <span class="contact-label">Research Blog</span>
-                <span class="contact-value">accessibilityvisibility.netlify.app</span>
-              </span>
-            </a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-  </main>
-
-  <footer class="site-footer" role="contentinfo">
-    <div class="container">
-      <div class="footer-inner">
-        <p class="footer-name">Shruti Chandra</p>
-        <p class="footer-note">MS Engineering Management · Tufts University · Boston, MA · <a href="mailto:shruti.chandra@tufts.edu">shruti.chandra@tufts.edu</a></p>
-        <p class="footer-a11y">This portfolio meets WCAG 2.1 AA guidelines. Found a barrier? <a href="mailto:shruti.chandra@tufts.edu">Email me</a>.</p>
       </div>
     </div>
-  </footer>
+
+    <!-- ─── CONTACT WINDOW ─── -->
+    <div class="window window-folder" id="window-contact" hidden
+         role="dialog" aria-labelledby="win-contact-title" aria-modal="false"
+         style="left:20vw; top:7rem;">
+      <div class="window-titlebar" data-drag="window-contact">
+        <div class="window-title-group">
+          <span class="window-dot" aria-hidden="true"></span>
+          <span class="window-title" id="win-contact-title">✉ Contact</span>
+        </div>
+        <button class="wctrl wctrl-close" data-close="window-contact" aria-label="Close">×</button>
+      </div>
+      <div class="window-content folder-content">
+        <h2 class="section-heading">Let's talk.</h2>
+        <p class="folder-intro">I'm interested in HCI research, product design, and roles where accessibility is treated as an engineering problem, not a compliance checkbox.</p>
+        <div class="contact-list">
+          <a href="mailto:shruti.chandra@tufts.edu" class="contact-row">
+            <span class="contact-icon" aria-hidden="true">✉</span>
+            <span class="contact-detail">
+              <span class="contact-label">Email</span>
+              <span class="contact-value">shruti.chandra@tufts.edu</span>
+            </span>
+          </a>
+          <a href="https://www.linkedin.com/in/shruti-chandra-118a661b2/" class="contact-row" target="_blank" rel="noopener">
+            <span class="contact-icon" aria-hidden="true">🔗</span>
+            <span class="contact-detail">
+              <span class="contact-label">LinkedIn</span>
+              <span class="contact-value">linkedin.com/in/shruti-chandra-118a661b2</span>
+            </span>
+          </a>
+          <a href="https://accessibilityvisibility.netlify.app/" class="contact-row" target="_blank" rel="noopener">
+            <span class="contact-icon" aria-hidden="true">📓</span>
+            <span class="contact-detail">
+              <span class="contact-label">Research Blog</span>
+              <span class="contact-value">accessibilityvisibility.netlify.app</span>
+            </span>
+          </a>
+        </div>
+        <p class="a11y-note">This portfolio meets WCAG 2.1 AA guidelines. Found a barrier? <a href="mailto:shruti.chandra@tufts.edu">Email me</a>.</p>
+      </div>
+    </div>
+
+    <!-- ─── HOBBIES WINDOW ─── -->
+    <div class="window window-folder" id="window-hobbies" hidden
+         role="dialog" aria-labelledby="win-hobbies-title" aria-modal="false"
+         style="left:24vw; top:8rem;">
+      <div class="window-titlebar" data-drag="window-hobbies">
+        <div class="window-title-group">
+          <span class="window-dot" aria-hidden="true"></span>
+          <span class="window-title" id="win-hobbies-title">📚 Hobbies</span>
+        </div>
+        <button class="wctrl wctrl-close" data-close="window-hobbies" aria-label="Close">×</button>
+      </div>
+      <div class="window-content folder-content">
+
+        <div class="folder-header-bar">
+          <h2 class="section-heading" style="margin-bottom:0.25rem;">Currently Reading</h2>
+          <p class="folder-intro">Books that shaped how I think about power, design, and who gets to imagine the future.</p>
+        </div>
+
+        <ul class="book-shelf" aria-label="Reading list">
+
+          <li class="book-card">
+            <div class="book-spine" aria-hidden="true"></div>
+            <div class="book-info">
+              <h3 class="book-title">Animal Farm</h3>
+              <p class="book-author">George Orwell</p>
+              <p class="book-note">A political allegory on power, corruption, and the betrayal of revolution - still disturbingly current.</p>
+            </div>
+            <span class="book-year">1945</span>
+          </li>
+
+          <li class="book-card">
+            <div class="book-spine book-spine-purple" aria-hidden="true"></div>
+            <div class="book-info">
+              <h3 class="book-title">Brave New World</h3>
+              <p class="book-author">Aldous Huxley</p>
+              <p class="book-note">A dystopia built not on fear but comfort and distraction - a preview of attention economies.</p>
+            </div>
+            <span class="book-year">1932</span>
+          </li>
+
+          <li class="book-card">
+            <div class="book-spine book-spine-light" aria-hidden="true"></div>
+            <div class="book-info">
+              <h3 class="book-title">Amusing Ourselves to Death</h3>
+              <p class="book-author">Neil Postman</p>
+              <p class="book-note">How television transformed public discourse - essential reading for anyone designing media or information systems.</p>
+            </div>
+            <span class="book-year">1985</span>
+          </li>
+
+          <li class="book-card">
+            <div class="book-spine book-spine-mid" aria-hidden="true"></div>
+            <div class="book-info">
+              <h3 class="book-title">Teaching to Transgress</h3>
+              <p class="book-author">bell hooks</p>
+              <p class="book-note">Education as the practice of freedom - on engaged pedagogy and the radical act of inclusion.</p>
+            </div>
+            <span class="book-year">1994</span>
+          </li>
+
+        </ul>
+
+      </div>
+    </div>
+
+  </main>
 
   <script src="script.js"></script>
 </body>

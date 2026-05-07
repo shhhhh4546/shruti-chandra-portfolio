@@ -7,16 +7,16 @@
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 :root {
-  --bg:          #B8D8BE;
+  --bg:          #dfe1d9;
   --card:        #FFFFFF;
-  --text:        #000000;
-  --text-muted:  #333333;
-  --border:      #000000;
+  --text:        #321e21;
+  --text-muted:  #746363;
+  --border:      #321e21;
   --border-w:    3px;
-  --pink:        #F6A6B2;
-  --green-light: #D4EDD8;
-  --shadow:      5px 5px 0 #000000;
-  --shadow-sm:   3px 3px 0 #000000;
+  --pink:        #fbe3e5;
+  --green-light: #8cab94;
+  --shadow:      5px 5px 0 #321e21;
+  --shadow-sm:   3px 3px 0 #321e21;
   --font: 'Times New Roman', Times, serif;
   --r: 0px;
   --r-sm: 0px;
@@ -139,7 +139,7 @@ a:hover { background: var(--pink); }
 .method-step { display: flex; gap: 0; align-items: flex-start; border-bottom: var(--border-w) solid var(--text); }
 .method-step:last-child { border-bottom: none; }
 .step-num { flex-shrink: 0; width: 42px; background: var(--text); color: var(--bg); display: flex; align-items: center; justify-content: center; font-size: 0.9rem; font-weight: 900; border-right: var(--border-w) solid var(--text); align-self: stretch; padding: 1rem 0; }
-.step-num-amber { background: #000000; }
+.step-num-amber { background: #321e21; }
 .method-step div { padding: 1rem; }
 .method-step div strong { display: block; font-size: 0.88rem; font-weight: 900; text-transform: uppercase; margin-bottom: 0.35rem; }
 .method-step div p { font-size: 0.83rem; color: var(--text-muted); line-height: 1.6; margin: 0; }
@@ -161,7 +161,7 @@ a:hover { background: var(--pink); }
 .finding-stat { padding: 1.25rem 1rem; border-right: var(--border-w) solid var(--text); text-align: center; }
 .finding-stat:last-child { border-right: none; }
 .finding-stat-good { background: var(--green-light); }
-.finding-stat-bad  { background: #F6A6B2; }
+.finding-stat-bad  { background: #fbe3e5; }
 .finding-stat-neutral { background: var(--card); }
 .fstat-num { display: block; font-size: 1.8rem; font-weight: 900; line-height: 1.1; margin-bottom: 0.3rem; }
 .fstat-label { font-size: 0.72rem; color: var(--text-muted); line-height: 1.4; }
@@ -194,7 +194,7 @@ a:hover { background: var(--pink); }
 .bar-label { font-size: 0.78rem; font-weight: 600; text-align: right; }
 .bar-track { background: var(--bg); border: var(--border-w) solid var(--text); height: 32px; }
 .bar-fill { height: 100%; display: flex; align-items: center; padding-left: 0.75rem; font-size: 0.78rem; font-weight: 900; min-width: 60px; }
-.bar-bad     { background: #F6A6B2; color: var(--text); }
+.bar-bad     { background: #fbe3e5; color: var(--text); }
 .bar-good    { background: var(--green-light); color: var(--text); }
 .bar-neutral { background: var(--pink); color: var(--text); }
 
@@ -204,9 +204,9 @@ a:hover { background: var(--pink); }
 .flow-steps { display: flex; align-items: stretch; flex-wrap: wrap; gap: 0; margin-bottom: 0.6rem; border: var(--border-w) solid var(--text); }
 .flow-step { display: flex; flex-direction: column; border-right: var(--border-w) solid var(--text); padding: 0.65rem 0.85rem; font-size: 0.76rem; font-weight: 600; text-align: center; min-width: 90px; background: var(--card); }
 .flow-step:last-child { border-right: none; }
-.flow-step-waste { background: #F6A6B2; font-weight: 700; }
+.flow-step-waste { background: #fbe3e5; font-weight: 700; }
 .flow-time { font-size: 0.68rem; color: var(--text-muted); font-weight: 400; margin-top: 0.2rem; }
-.flow-step-waste .flow-time { color: #000000; font-weight: 700; }
+.flow-step-waste .flow-time { color: #321e21; font-weight: 700; }
 .flow-arrow { display: none; }
 .flow-note { font-size: 0.78rem; color: var(--text-muted); padding: 0.4rem; }
 
@@ -341,7 +341,7 @@ a:hover { background: var(--pink); }
 }
 
 /* ============================================================
-   HCI PORTFOLIO PAGE — ADDITIONAL STYLES
+   HCI PORTFOLIO PAGE - ADDITIONAL STYLES
    ============================================================ */
 .p-hero { padding: 5rem 0 4rem; background: var(--bg); border-bottom: var(--border-w) solid var(--text); }
 .p-hero h1 { font-size: clamp(2.4rem, 5vw, 4.5rem); font-weight: 900; line-height: 0.98; text-transform: uppercase; letter-spacing: -0.02em; margin-bottom: 1.5rem; border-left: 8px solid var(--text); padding-left: 1.25rem; }
@@ -359,8 +359,8 @@ a:hover { background: var(--pink); }
 .theme-h-green { background: var(--green-light); }
 .theme-h-pink  { background: var(--pink); }
 .theme-h-warm  { background: var(--pink); }
-.theme-h-blue  { background: #B8D8BE; }
-.theme-h-sage  { background: #B8D8BE; }
+.theme-h-blue  { background: #dfe1d9; }
+.theme-h-sage  { background: #dfe1d9; }
 .theme-num { font-size: 0.65rem; font-weight: 900; letter-spacing: 0.15em; text-transform: uppercase; background: var(--text); color: var(--bg); padding: 0.2rem 0.5rem; flex-shrink: 0; }
 .theme-header h3 { font-size: 1.3rem; font-weight: 900; text-transform: uppercase; letter-spacing: 0.01em; }
 .theme-body { padding: 2rem; }
@@ -375,7 +375,7 @@ a:hover { background: var(--pink); }
 .ev-list li:last-child { border-bottom: none; }
 .ev-list li strong { font-weight: 700; }
 .ev-list li em { font-style: italic; }
-.analysis-block { background: #B8D8BE; border: var(--border-w) solid var(--text); border-left: 6px solid var(--text); padding: 1.1rem 1.4rem; margin-top: 1.75rem; }
+.analysis-block { background: #dfe1d9; border: var(--border-w) solid var(--text); border-left: 6px solid var(--text); padding: 1.1rem 1.4rem; margin-top: 1.75rem; }
 .analysis-block h4 { background: var(--text) !important; color: var(--bg) !important; margin-top: 0 !important; }
 .analysis-block p { font-size: 0.92rem; line-height: 1.7; }
 .analysis-block p strong { font-weight: 700; }
