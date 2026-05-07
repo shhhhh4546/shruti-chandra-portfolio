@@ -114,10 +114,31 @@ const Desktop = (() => {
     const desktopH   = window.innerHeight - 36;
     const folderGap  = 150; /* approximate width of right-side folder column */
     const usableW    = window.innerWidth - folderGap;
-    const w = win.offsetWidth  || 680;
+    const w = win.offsetWidth  || 860;
     const h = win.offsetHeight || 480;
     win.style.left = Math.max(8, (usableW - w) / 2) + 'px';
     win.style.top  = Math.max(8, (desktopH - h) / 2) + 'px';
+  }
+
+  function toggleMinimize(win) {
+    win.classList.toggle('win-minimized');
+    bringToFront(win);
+  }
+
+  function toggleMaximize(win) {
+    if (win.classList.contains('win-maximized')) {
+      win.classList.remove('win-maximized');
+      const s = win._saved;
+      if (s) { win.style.left = s.left; win.style.top = s.top; win.style.width = s.width || ''; win.style.height = s.height || ''; }
+      delete win._saved;
+    } else {
+      win.classList.remove('win-minimized');
+      win._saved = { left: win.style.left, top: win.style.top, width: win.style.width, height: win.style.height };
+      win.classList.add('win-maximized');
+      win.style.left = '0'; win.style.top = '0';
+      win.style.width = ''; win.style.height = '';
+    }
+    bringToFront(win);
   }
 
   function bringToFront(win) {
@@ -318,9 +339,16 @@ const Desktop = (() => {
       });
     });
 
-    /* Close buttons - data-close has full id like "window-case-studies" */
-    document.querySelectorAll('[data-close]').forEach(btn => {
-      btn.addEventListener('click', () => close(btn.dataset.close));
+    /* Mac traffic light buttons */
+    document.querySelectorAll('.tl[data-action]').forEach(btn => {
+      btn.addEventListener('click', e => {
+        e.stopPropagation();
+        const win = $(btn.dataset.win);
+        if (!win) return;
+        if (btn.dataset.action === 'close')    close(btn.dataset.win);
+        if (btn.dataset.action === 'minimize') toggleMinimize(win);
+        if (btn.dataset.action === 'maximize') toggleMaximize(win);
+      });
     });
 
     /* Escape closes top window */

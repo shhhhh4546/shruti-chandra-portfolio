@@ -36,10 +36,13 @@
          role="dialog" aria-labelledby="win-welcome-title" aria-modal="false"
          hidden>
       <div class="window-titlebar" data-drag="window-welcome">
-        <div class="window-title-group">
-          <span class="window-dot" aria-hidden="true"></span>
-          <span class="window-title" id="win-welcome-title">shruti_chandra.txt</span>
+        <div class="win-traffic">
+          <button class="tl tl-red" disabled aria-label="Pinned" tabindex="-1"></button>
+          <button class="tl tl-yellow" data-action="minimize" data-win="window-welcome" aria-label="Minimise"></button>
+          <button class="tl tl-green"  data-action="maximize" data-win="window-welcome" aria-label="Maximise"></button>
         </div>
+        <span class="window-title" id="win-welcome-title">shruti_chandra.txt</span>
+        <span class="win-traffic-spacer" aria-hidden="true"></span>
       </div>
       <div class="window-content welcome-content">
 
@@ -218,11 +221,13 @@
          role="dialog" aria-labelledby="win-cs-title" aria-modal="false"
          style="left:8vw; top:4rem;">
       <div class="window-titlebar" data-drag="window-case-studies">
-        <div class="window-title-group">
-          <span class="window-dot" aria-hidden="true"></span>
-          <span class="window-title" id="win-cs-title">📊 Case Studies</span>
+        <div class="win-traffic">
+          <button class="tl tl-red"    data-action="close"    data-win="window-case-studies" aria-label="Close"></button>
+          <button class="tl tl-yellow" data-action="minimize" data-win="window-case-studies" aria-label="Minimise"></button>
+          <button class="tl tl-green"  data-action="maximize" data-win="window-case-studies" aria-label="Maximise"></button>
         </div>
-        <button class="wctrl wctrl-close" data-close="window-case-studies" aria-label="Close">×</button>
+        <span class="window-title" id="win-cs-title">📊 Case Studies</span>
+        <span class="win-traffic-spacer" aria-hidden="true"></span>
       </div>
       <div class="window-content folder-content">
 
@@ -453,11 +458,13 @@
          role="dialog" aria-labelledby="win-work-title" aria-modal="false"
          style="left:12vw; top:5rem;">
       <div class="window-titlebar" data-drag="window-work-experience">
-        <div class="window-title-group">
-          <span class="window-dot" aria-hidden="true"></span>
-          <span class="window-title" id="win-work-title">💼 Work Experience</span>
+        <div class="win-traffic">
+          <button class="tl tl-red"    data-action="close"    data-win="window-work-experience" aria-label="Close"></button>
+          <button class="tl tl-yellow" data-action="minimize" data-win="window-work-experience" aria-label="Minimise"></button>
+          <button class="tl tl-green"  data-action="maximize" data-win="window-work-experience" aria-label="Maximise"></button>
         </div>
-        <button class="wctrl wctrl-close" data-close="window-work-experience" aria-label="Close">×</button>
+        <span class="window-title" id="win-work-title">💼 Work Experience</span>
+        <span class="win-traffic-spacer" aria-hidden="true"></span>
       </div>
       <div class="window-content folder-content">
 
@@ -607,11 +614,13 @@
          role="dialog" aria-labelledby="win-res-title" aria-modal="false"
          style="left:16vw; top:6rem;">
       <div class="window-titlebar" data-drag="window-research">
-        <div class="window-title-group">
-          <span class="window-dot" aria-hidden="true"></span>
-          <span class="window-title" id="win-res-title">🔬 Research</span>
+        <div class="win-traffic">
+          <button class="tl tl-red"    data-action="close"    data-win="window-research" aria-label="Close"></button>
+          <button class="tl tl-yellow" data-action="minimize" data-win="window-research" aria-label="Minimise"></button>
+          <button class="tl tl-green"  data-action="maximize" data-win="window-research" aria-label="Maximise"></button>
         </div>
-        <button class="wctrl wctrl-close" data-close="window-research" aria-label="Close">×</button>
+        <span class="window-title" id="win-res-title">🔬 Research</span>
+        <span class="win-traffic-spacer" aria-hidden="true"></span>
       </div>
       <div class="window-content folder-content">
 
@@ -661,11 +670,13 @@
          role="dialog" aria-labelledby="win-contact-title" aria-modal="false"
          style="left:20vw; top:7rem;">
       <div class="window-titlebar" data-drag="window-contact">
-        <div class="window-title-group">
-          <span class="window-dot" aria-hidden="true"></span>
-          <span class="window-title" id="win-contact-title">✉ Contact</span>
+        <div class="win-traffic">
+          <button class="tl tl-red"    data-action="close"    data-win="window-contact" aria-label="Close"></button>
+          <button class="tl tl-yellow" data-action="minimize" data-win="window-contact" aria-label="Minimise"></button>
+          <button class="tl tl-green"  data-action="maximize" data-win="window-contact" aria-label="Maximise"></button>
         </div>
-        <button class="wctrl wctrl-close" data-close="window-contact" aria-label="Close">×</button>
+        <span class="window-title" id="win-contact-title">✉ Contact</span>
+        <span class="win-traffic-spacer" aria-hidden="true"></span>
       </div>
       <div class="window-content folder-content">
         <h2 class="section-heading">Let's talk.</h2>
@@ -702,11 +713,13 @@
          role="dialog" aria-labelledby="win-hobbies-title" aria-modal="false"
          style="left:24vw; top:8rem;">
       <div class="window-titlebar" data-drag="window-hobbies">
-        <div class="window-title-group">
-          <span class="window-dot" aria-hidden="true"></span>
-          <span class="window-title" id="win-hobbies-title">📚 Hobbies</span>
+        <div class="win-traffic">
+          <button class="tl tl-red"    data-action="close"    data-win="window-hobbies" aria-label="Close"></button>
+          <button class="tl tl-yellow" data-action="minimize" data-win="window-hobbies" aria-label="Minimise"></button>
+          <button class="tl tl-green"  data-action="maximize" data-win="window-hobbies" aria-label="Maximise"></button>
         </div>
-        <button class="wctrl wctrl-close" data-close="window-hobbies" aria-label="Close">×</button>
+        <span class="window-title" id="win-hobbies-title">📚 Hobbies</span>
+        <span class="win-traffic-spacer" aria-hidden="true"></span>
       </div>
       <div class="window-content folder-content">
 
